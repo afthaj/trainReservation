@@ -1,0 +1,73 @@
+<HTML>
+
+<head>
+	<script type="text/javascript"> 
+		function checkLoginboxes() {			
+			//get the value of txtUserName
+			var txtuser = document.mainPage.TextUserName.value;
+			var txtpws = document.mainPage.PassWard.value;
+			//check if username is empty
+				//if so give a error message
+			//alert(v1);
+			var txtuserln = txtuser.length;
+			var txtpwsln = txtpws.length;
+			//alert(v2);
+			if (txtuserln == 0) {
+				
+				alert('Username cannot be empty');
+				return false;
+			}	
+			else if (txtpwsln == 0){
+				alert('Passward cannot be empty');
+				return false;
+			}
+			
+			return true;					
+		}
+	</script>
+    
+<link href="sryles.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+<div id="cont">
+		<div class="logImg"></div>
+<div id="logn">
+
+			
+
+<br/><br/>
+	<FORM action='CheckValidation.php' method="post" name="mainPage" onSubmit="javascript:return checkLoginboxes()">
+
+<!-- Creating username and passward fields -->
+<center>User Name : <input type="text" name="TextUserName"  /> </center> <br />
+<br />
+<center>PassWard  : <input type="password" name="PassWard"  /> </center>
+
+				
+
+<br />
+<br />
+<!-- Creating buttons for username and passward -->
+<center>
+<input type="submit" value="Login"  />
+<input type="button" value="Cancel"   />
+
+
+</center>
+<div class="singImg">
+<br/>
+<br/>
+
+</div>
+<center>
+<input type="button" value="SignUp"  />
+</center>
+	
+<FORM/>
+				
+</div>
+</div>
+</body>
+</html>

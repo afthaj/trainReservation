@@ -1,0 +1,466 @@
+
+insert into train_schedule
+values('0009', 'Intercity Express', 'Colombo-Fort', '07:00:00' , 'Kandy','09:35:00', 'Colombo-Fort, Maradana, Dematagoda, Kelaniya, Wanawasala, Hunupitiya, Enderamulla, Horape, Ragama, Walpola, Batuwaththa, Bulugahagoda, Ganemulla, Yagoda, Gampaha, Daraluwa, Bemmulla, Magalegoda, Heendeniya Pattiyagoda, Veyangoda, Wadurawa, Keenawala, Ganegoda, Wijaya Rajadahana, Mirigama, Wilwatta, Botale, Ambepussa, Yattalgoda, Bujjomuwa, Alawwa, Walakumbura, Polgahawela, Panaliya, Tismalpola, Yatagama, Rambukkana, Kadigamuwa, Gangoda, Ihala Kotte, Balana, Kadugannawa, Pilimatalawa, Peradeniya, Sarasavi Uyana, Kandy', 'Daily','1st & 2nd Class Reserved');
+
+insert into train_schedule
+values('0006','Podi Menike', 'Badulla', '09:10:00', 'Colombo-Fort', '19:45:00', 'Badulla, Hali Ela, Uduwara, Demodara, Ella, Bandarawela, Diyatalawe, Haputale, Idalgashinna,  Ohiya, Pattipola, Ambewela, Nanu Oya, Great Western, Watagodde, Talawakelle, Kotagala, Hatton, Rozella, Watawala, Galabodde, Nawalapitiya, Ulapane, Gampola, Peradeniya, Pilimatalawa, Kadugannawa, Balana, Ihala Kotte, Gangoda, Kadigamuwa, Rambukkana, Yatagama, Tismalpola, Panaliya, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort', 'Daily', 'Runs via Kandy, Observation Saloon 2nd & 3rd Class');
+
+-- main line
+
+insert into train_schedule
+values('0010','Intercity Express','Kandy','15:00:00','Colombo-Fort','17:35:', 'Kandy, Sarasavi Uyana, Peradeniya, Pilimatalawa, Kadugannawa, Balana, Ihala Kotte, Gangoda, Kadigamuwa, Rambukkana, Yatagama, Tismalpola, Panaliya, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort', 'Daily','1st & 2nd Class Reserved');
+
+-- main line
+
+insert into train_schedule
+values('0015','Udarata Menike','Colombo-Fort','09:45:00','Badulla','19:05:00', 'Colombo-Fort, Maradana, Dematagoda, Kelaniya, Wanawasala, Hunupitiya, Enderamulla, Horape, Ragama, Walpola, Batuwaththa, Bulugahagoda, Ganemulla, Yagoda, Gampaha, Daraluwa, Bemmulla, Magalegoda, Heendeniya Pattiyagoda, Veyangoda, Wadurawa, Keenawala, Ganegoda, Wijaya Rajadahana, Mirigama, Wilwatta, Botale, Ambepussa, Yattalgoda, Bujjomuwa, Alawwa, Walakumbura, Polgahawela, Panaliya, Tismalpola, Yatagama, Rambukkana, Kadigamuwa, Gangoda, Ihala Kotte, Balana, Kadugannawa, Pilimatalawa, Peradeniya, Gampola, Ulapane, Nawalapitiya, Galabodde, Watawala, Rozella, Hatton, Kotagala, Talawakelle, Watagodde, Great Western, Nanu Oya, Ambewela, Pattipola, Ohiya, Idalgashinna, Haputale, Diyatalawe, Bandarawela, Ella, Demodara, Uduwara, Hali Ela, Badulla', 'Daily','Observation Saloon 2nd & 3rd Class');
+
+-- main line
+
+insert into train_schedule
+values('0016','Udarata Menike','Badulla','05:55:00','Colombo-Fort','15:30:00', 'Badulla, Hali Ela, Uduwara, Demodara, Ella, Bandarawela, Diyatalawe, Haputale, Idalgashinna,  Ohiya, Pattipola, Ambewela, Nanu Oya, Great Western, Watagodde, Talawakelle, Kotagala, Hatton, Rozella, Watawala, Galabodde, Nawalapitiya, Ulapane, Gampola, Peradeniya, Pilimatalawa, Kadugannawa, Balana, Ihala Kotte, Gangoda, Kadigamuwa, Rambukkana, Yatagama, Tismalpola, Panaliya, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort', 'Daily','Observation Saloon 2nd & 3rd Class');
+
+-- main line
+
+insert into train_schedule
+values('0019','Express','Colombo-Fort','10:30:00','Matale','16:15:00', 'Colombo-Fort, Maradana, Dematagoda, Kelaniya, Wanawasala, Hunupitiya, Enderamulla, Horape, Ragama, Walpola, Batuwaththa, Bulugahagoda, Ganemulla, Yagoda, Gampaha, Daraluwa, Bemmulla, Magalegoda, Heendeniya Pattiyagoda, Veyangoda, Wadurawa, Keenawala, Ganegoda, Wijaya Rajadahana, Mirigama, Wilwatta, Botale, Ambepussa, Yattalgoda, Bujjomuwa, Alawwa, Walakumbura, Polgahawela, Panaliya, Tismalpola, Yatagama, Rambukkana, Kadigamuwa, Gangoda, Ihala Kotte, Balana, Kadugannawa, Pilimatalawa, Peradeniya, Sarasavi Uyana, Kandy, Matale', 'Daily','2nd & 3rd Class');
+
+-- main line
+
+insert into train_schedule
+values('0020','Express','Kandy','15:40:00','Colombo-Fort','18:55:00', 'Kandy, Sarasavi Uyana, Peradeniya, Pilimatalawa, Kadugannawa, Balana, Ihala Kotte, Gangoda, Kadigamuwa, Rambukkana, Yatagama, Tismalpola, Panaliya, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort', 'Daily','2nd & 3rd Class');
+
+-- main line
+
+insert into train_schedule
+values('0023','Express','Colombo-Fort','12:40:00','Hatton','20:00:00', 'Colombo-Fort, Maradana, Dematagoda, Kelaniya, Wanawasala, Hunupitiya, Enderamulla, Horape, Ragama, Walpola, Batuwaththa, Bulugahagoda, Ganemulla, Yagoda, Gampaha, Daraluwa, Bemmulla, Magalegoda, Heendeniya Pattiyagoda, Veyangoda, Wadurawa, Keenawala, Ganegoda, Wijaya Rajadahana, Mirigama, Wilwatta, Botale, Ambepussa, Yattalgoda, Bujjomuwa, Alawwa, Walakumbura, Polgahawela, Panaliya, Tismalpola, Yatagama, Rambukkana, Kadigamuwa, Gangoda, Ihala Kotte, Balana, Kadugannawa, Pilimatalawa, Peradeniya, Gampola, Ulapane, Nawalapitiya, Galabodde, Watawala, Rozella, Hatton', 'Daily','2nd & 3rd Class');
+
+-- main line
+
+insert into train_schedule
+values('0029','Intercity Express','Colombo-Fort','15:35:00','Kandy','18:05:00', 'Colombo-Fort, Maradana, Dematagoda, Kelaniya, Wanawasala, Hunupitiya, Enderamulla, Horape, Ragama, Walpola, Batuwaththa, Bulugahagoda, Ganemulla, Yagoda, Gampaha, Daraluwa, Bemmulla, Magalegoda, Heendeniya Pattiyagoda, Veyangoda, Wadurawa, Keenawala, Ganegoda, Wijaya Rajadahana, Mirigama, Wilwatta, Botale, Ambepussa, Yattalgoda, Bujjomuwa, Alawwa, Walakumbura, Polgahawela, Panaliya, Tismalpola, Yatagama, Rambukkana, Kadigamuwa, Gangoda, Ihala Kotte, Balana, Kadugannawa, Pilimatalawa, Peradeniya, Sarasavi Uyana, Kandy', 'Daily','1st & 2nd Class Stops at Peradeniya');
+
+-- main line
+
+insert into train_schedule
+values('0030','Intercity Express','Kandy','06:25:00','Colombo-Fort','09:00:00', 'Kandy, Sarasavi Uyana, Peradeniya, Pilimatalawa, Kadugannawa, Balana, Ihala Kotte, Gangoda, Kadigamuwa, Rambukkana, Yatagama, Tismalpola, Panaliya, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort', 'Daily','Observation & 2nd Class Reserved');
+
+-- main line
+
+insert into train_schedule
+value('0035','Express','Colombo-Fort','16:55:00','Kandy','20:00:00', 'Colombo-Fort, Maradana, Dematagoda, Kelaniya, Wanawasala, Hunupitiya, Enderamulla, Horape, Ragama, Walpola, Batuwaththa, Bulugahagoda, Ganemulla, Yagoda, Gampaha, Daraluwa, Bemmulla, Magalegoda, Heendeniya Pattiyagoda, Veyangoda, Wadurawa, Keenawala, Ganegoda, Wijaya Rajadahana, Mirigama, Wilwatta, Botale, Ambepussa, Yattalgoda, Bujjomuwa, Alawwa, Walakumbura, Polgahawela, Panaliya, Tismalpola, Yatagama, Rambukkana, Kadigamuwa, Gangoda, Ihala Kotte, Balana, Kadugannawa, Pilimatalawa, Peradeniya, Sarasavi Uyana, Kandy', 'Daily','2nd & 3rd Class');
+
+-- main line
+
+insert into train_schedule
+values('0036','Express','Matale','05:15:00','Colombo-Fort','10:10:00', 'Matale, Kandy, Sarasavi Uyana, Peradeniya, Pilimatalawa, Kadugannawa, Balana, Ihala Kotte, Gangoda, Kadigamuwa, Rambukkana, Yatagama, Tismalpola, Panaliya, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort', 'Daily','2nd & 3rd Class');
+
+-- main line + matale line
+
+insert into train_schedule
+values('0039','Express','Matale','13:15:00','Kandy','21:00:00','Daily','Dep. Via Colombo-Fort at 17:00:00 2nd & 3rd Class');
+
+-- -- main line + matale line
+
+insert into train_schedule
+values('0040','Express','Kandy','0525','Matale','1315','Daily','Dep.Via Colombo-Fort at 9:00 2nd & 3rd Class');
+
+-- matale line
+
+insert into train_schedule
+values('0045','Night Mail','Colombo-Fort','19:40:00','Badulla','06:30:00', 'Colombo-Fort, Maradana, Dematagoda, Kelaniya, Wanawasala, Hunupitiya, Enderamulla, Horape, Ragama, Walpola, Batuwaththa, Bulugahagoda, Ganemulla, Yagoda, Gampaha, Daraluwa, Bemmulla, Magalegoda, Heendeniya Pattiyagoda, Veyangoda, Wadurawa, Keenawala, Ganegoda, Wijaya Rajadahana, Mirigama, Wilwatta, Botale, Ambepussa, Yattalgoda, Bujjomuwa, Alawwa, Walakumbura, Polgahawela, Panaliya, Tismalpola, Yatagama, Rambukkana, Kadigamuwa, Gangoda, Ihala Kotte, Balana, Kadugannawa, Pilimatalawa, Peradeniya, Gampola, Ulapane, Nawalapitiya, Galabodde, Watawala, Rozella, Hatton, Kotagala, Talawakelle, Watagodde, Great Western, Nanu Oya, Ambewela, Pattipola, Ohiya, Idalgashinna, Haputale, Diyatalawe, Bandarawela, Ella, Demodara, Uduwara, Hali Ela, Badulla', 'Daily','2nd & 3rd Class');
+
+-- main line
+
+insert into train_schedule
+values('0047','Night Mail','Colombo-Fort','2200','Badulla','0845', 'Colombo-Fort, Maradana, Dematagoda, Kelaniya, Wanawasala, Hunupitiya, Enderamulla, Horape, Ragama, Walpola, Batuwaththa, Bulugahagoda, Ganemulla, Yagoda, Gampaha, Daraluwa, Bemmulla, Magalegoda, Heendeniya Pattiyagoda, Veyangoda, Wadurawa, Keenawala, Ganegoda, Wijaya Rajadahana, Mirigama, Wilwatta, Botale, Ambepussa, Yattalgoda, Bujjomuwa, Alawwa, Walakumbura, Polgahawela, Panaliya, Tismalpola, Yatagama, Rambukkana, Kadigamuwa, Gangoda, Ihala Kotte, Balana, Kadugannawa, Pilimatalawa, Peradeniya, Gampola, Ulapane, Nawalapitiya, Galabodde, Watawala, Rozella, Hatton, Kotagala, Talawakelle, Watagodde, Great Western, Nanu Oya, Ambewela, Pattipola, Ohiya, Idalgashinna, Haputale, Diyatalawe, Bandarawela, Ella, Demodara, Uduwara, Hali Ela, Badulla', 'Daily', '1st Class Berths and 2nd and 3rd Class Sleeperettes');
+
+-- main line
+
+insert into train_schedule
+values('0048','Night Mail','Badulla','19:50:00','Colombo-Fort','05:50:00', 'Badulla, Hali Ela, Uduwara, Demodara, Ella, Bandarawela, Diyatalawe, Haputale, Idalgashinna,  Ohiya, Pattipola, Ambewela, Nanu Oya, Great Western, Watagodde, Talawakelle, Kotagala, Hatton, Rozella, Watawala, Galabodde, Nawalapitiya, Ulapane, Gampola, Peradeniya, Pilimatalawa, Kadugannawa, Balana, Ihala Kotte, Gangoda, Kadigamuwa, Rambukkana, Yatagama, Tismalpola, Panaliya, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort', 'Daily','2nd & 3rd Class Sleeperettes');
+
+-- main line
+
+insert into train_schedule
+values('0050','Night Mail','Matara','18:30:00','Trincomalee','08:45:00','Matara, Kamburugamuva, Weligama, Ahangama, Koggala, Talpe, Galle, Hikkaduwa, Ambalangoda, Balapitiya, Kosgoda, Bentota, Aluthgama, Beruwala, Kaluthara, Wadduwa, Panadura, Moratuwa, Ratmalana, Mount Lavinia, Dehiwala, Wellawatta, Bambalapitiya, Kollutipiya, Slave Island, Colombo-Fort, Maradana, Maradana, Dematagoda, Kelaniya, Wanawasala, Hunupitiya, Enderamulla, Horape, Ragama, Walpola, Batuwaththa, Bulugahagoda, Ganemulla, Yagoda, Gampaha, Daraluwa, Bemmulla, Magalegoda, Heendeniya Pattiyagoda, Veyangoda, Wadurawa, Keenawala, Ganegoda, Wijaya Rajadahana, Mirigama, Wilwatta, Botale, Ambepussa, Yattalgoda, Bujjomuwa, Alawwa, Walakumbura, Polgahawela, Polgahawela, Potuhera, Kurunegala, Wellawa, Ganewatta, Maho, Moragollagama, Kalawewa, Kekirawa, Habarana, Gal Oya, Kanthalai, Thampalakamam, China Bay, Trincomalee','Daily','Departure Via Colombo-Fort at 22:30 2nd and 3rd Class');
+
+-- coastal line + main line + north line + batticaloa line + trinco line
+
+insert into train_schedule
+values('0051','Night Mail','Trincomalee','17:00:00','Matara','07:15:00', 'Trincomalee, China Bay, Thampalakamam, Kanthalai, Gal Oya, Habarana, Kekirawa, Kalawewa, Moragollagama, Maho, Ganewatta, Wellawa, Kurunegala, Potuhera, Polgahawela, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort, Slave Island, Kollutipiya, Bambalapitiya, Wellawatta, Dehiwala, Mount Lavinia, Ratmalana, Moratuwa, Panadura, Wadduwa, Kaluthara, Beruwala, Aluthgama, Bentota, Kosgoda, Balapitiya, Ambalangoda, Hikkaduwa, Galle, Talpe, Koggala,
+Ahangama, Weligama, Kamburugamuva, Matara', 'Daily','Departure Via Colombo-Fort at 3:15 2nd & 3rd Class');
+
+-- coastal line + main line + north line + batticaloa line + trinco line
+
+insert into train_schedule
+values('0056','Gaalu Kumari','Maradana','13:40:00','Matara','18:40:00', 'Maradana, Colombo-Fort, Slave Island, Kollutipiya, Bambalapitiya, Wellawatta, Dehiwala, Mount Lavinia, Ratmalana, Moratuwa, Panadura, Wadduwa, Kaluthara, Beruwala, Aluthgama, Bentota, Kosgoda, Balapitiya, Ambalangoda, Hikkaduwa, Galle, Talpe, Koggala,
+Ahangama, Weligama, Kamburugamuva, Matara', 'Monday to Friday','2nd & 3rd Class Colombo-Fort 14:05 Galle 18:16 Sat, Sun, Poya 3rd Class');
+
+-- coastal line
+
+insert into train_schedule
+values('0057','Gaalu Kumari','Matara','07:25:00','Maradana','11:50:00', 'Matara, Kamburugamuva, Weligama, Ahangama, Koggala, Talpe, Galle, Hikkaduwa, Ambalangoda, Balapitiya, Kosgoda, Bentota, Aluthgama, Beruwala, Kaluthara, Wadduwa, Panadura, Moratuwa, Ratmalana, Mount Lavinia, Dehiwala, Wellawatta, Bambalapitiya, Kollutipiya, Slave Island, Colombo-Fort, Maradana', 'Daily','2nd & 3rd Class');
+
+-- coastal line
+
+insert into train_schedule
+values('0058','Ruhunu Kumari','Maradana','15:50:00','Matara','19:30:00','Maradana, Colombo-Fort, Slave Island, Kollutipiya, Bambalapitiya, Wellawatta, Dehiwala, Mount Lavinia, Ratmalana, Moratuwa, Panadura, Wadduwa, Kaluthara, Beruwala, Aluthgama, Bentota, Kosgoda, Balapitiya, Ambalangoda, Hikkaduwa, Galle, Talpe, Koggala,
+Ahangama, Weligama, Kamburugamuva, Matara','Daily','2nd & 3rd Class');
+
+-- coastal line
+
+insert into train_schedule
+values('0059','Ruhunu Kumari','Matara','05:40:00','Maradana','09:20:00','Matara, Kamburugamuva, Weligama, Ahangama, Koggala, Talpe, Galle, Hikkaduwa, Ambalangoda, Balapitiya, Kosgoda, Bentota, Aluthgama, Beruwala, Kaluthara, Wadduwa, Panadura, Moratuwa, Ratmalana, Mount Lavinia, Dehiwala, Wellawatta, Bambalapitiya, Kollutipiya, Slave Island, Colombo-Fort, Maradana','Daily','2nd & 3rd Class');
+
+-- coastal line
+
+insert into train_schedule
+values('0077','Yaldevi' ,'Colombo-Fort','05:45:00','Vavuniya','11:50:00','Colombo-Fort, Maradana, Dematagoda, Kelaniya, Wanawasala, Hunupitiya, Enderamulla, Horape, Ragama, Walpola, Batuwaththa, Bulugahagoda, Ganemulla, Yagoda, Gampaha, Daraluwa, Bemmulla, Magalegoda, Heendeniya Pattiyagoda, Veyangoda, Wadurawa, Keenawala, Ganegoda, Wijaya Rajadahana, Mirigama, Wilwatta, Botale, Ambepussa, Yattalgoda, Bujjomuwa, Alawwa, Walakumbura, Polgahawela, Potuhera, Kurunegala, Wellawa, Ganewatta, Maho, Galgamuwa, Talawa, Anuradhapura, Medawachchiya, Vavuniya', 'Daily','Travels via Anuradhapura Air Conditioned 1st Class 2nd & 3 Class');
+
+-- main line + north line
+
+insert into train_schedule
+values('0078','Yaldevi','Vavuniya','13:15:00','Colombo-Fort','19:20:00','Vavuniya, Medawachchiya, Anuradhapura, Talawa, Galgamuwa, Maho, Ganewatta, Wellawa, Kurunegala, Potuhera, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort', 'Daily','2nd & 3rd Class Reserved/Non');
+
+-- main line + north line
+
+insert into train_schedule
+values('0081','Express','Colombo-Fort','06:15:00','Trincomalee','14:10:00','Colombo-Fort, Maradana, Dematagoda, Kelaniya, Wanawasala, Hunupitiya, Enderamulla, Horape, Ragama, Walpola, Batuwaththa, Bulugahagoda, Ganemulla, Yagoda, Gampaha, Daraluwa, Bemmulla, Magalegoda, Heendeniya Pattiyagoda, Veyangoda, Wadurawa, Keenawala, Ganegoda, Wijaya Rajadahana, Mirigama, Wilwatta, Botale, Ambepussa, Yattalgoda, Bujjomuwa, Alawwa, Walakumbura, Polgahawela, Polgahawela, Potuhera, Kurunegala, Wellawa, Ganewatta, Maho, Moragollagama, Kalawewa, Kekirawa, Habarana, Gal Oya, Kanthalai, Thampalakamam, China Bay, Trincomalee', 'Daily','2nd & 3rd Class Connection to Gal Oya - Polonnaruwa at 13:15');
+
+-- main line + north line + batticaloa line + trinco line
+
+insert into train_schedule
+values('0082','Express','Trincomalee','09:45:00','Colombo-Fort','17:45:00','Trincomalee, China Bay, Thampalakamam, Kanthalai, Gal Oya, Gal Oya, Habarana, Kekirawa, Kalawewa, Moragollagama, Maho, Ganewatta, Wellawa, Kurunegala, Potuhera, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort', 'Daily','2nd & 3rd Class Connection to Gal Oya-Polonnaruwa at 10:50');
+
+-- main line + north line + batticaloa line + trinco line
+
+insert into train_schedule
+values('0085','Rajarata Rajini','Matara','09:15:00','Vavuniya','20:25:00','Matara, Kamburugamuva, Weligama, Ahangama, Koggala, Talpe, Galle, Hikkaduwa, Ambalangoda, Balapitiya, Kosgoda, Bentota, Aluthgama, Beruwala, Kaluthara, Wadduwa, Panadura, Moratuwa, Ratmalana, Mount Lavinia, Dehiwala, Wellawatta, Bambalapitiya, Kollutipiya, Slave Island, Colombo-Fort, Maradana, Dematagoda, Kelaniya, Wanawasala, Hunupitiya, Enderamulla, Horape, Ragama, Walpola, Batuwaththa, Bulugahagoda, Ganemulla, Yagoda, Gampaha, Daraluwa, Bemmulla, Magalegoda, Heendeniya Pattiyagoda, Veyangoda, Wadurawa, Keenawala, Ganegoda, Wijaya Rajadahana, Mirigama, Wilwatta, Botale, Ambepussa, Yattalgoda, Bujjomuwa, Alawwa, Walakumbura, Polgahawela, Potuhera, Kurunegala, Wellawa, Ganewatta, Maho, Galgamuwa, Talawa, Anuradhapura, Medawachchiya, Vavuniya','Daily','2nd & 3rd Class Via Colombo-Fort Departure at 14:00');
+
+-- coastal line + main line + north line
+
+insert into train_schedule
+values('0086','Rajarata Rajini','Vavuniya','03:15:00','Matara','14:15:00','Vavuniya, Medawachchiya, Anuradhapura, Talawa, Galgamuwa, Maho, Ganewatta, Wellawa, Kurunegala, Potuhera, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort, Slave Island, Kollutipiya, Bambalapitiya, Wellawatta, Dehiwala, Mount Lavinia, Ratmalana, Moratuwa, Panadura, Wadduwa, Kaluthara, Beruwala, Aluthgama, Bentota, Kosgoda, Balapitiya, Ambalangoda, Hikkaduwa, Galle, Talpe, Koggala, Ahangama, Weligama, Kamburugamuva, Matara', 'Daily','2nd & 3rd Class Via Colombo-Fort Departure at 10:30');
+
+-- coastal line + main line + north line
+
+insert into train_schedule
+values('0089','Night Mail','Colombo-Fort','21:30:00','Vavuniya','04:25:00','Colombo-Fort, Maradana, Dematagoda, Kelaniya, Wanawasala, Hunupitiya, Enderamulla, Horape, Ragama, Walpola, Batuwaththa, Bulugahagoda, Ganemulla, Yagoda, Gampaha, Daraluwa, Bemmulla, Magalegoda, Heendeniya Pattiyagoda, Veyangoda, Wadurawa, Keenawala, Ganegoda, Wijaya Rajadahana, Mirigama, Wilwatta, Botale, Ambepussa, Yattalgoda, Bujjomuwa, Alawwa, Walakumbura, Polgahawela, Potuhera, Kurunegala, Wellawa, Ganewatta, Maho, Galgamuwa, Talawa, Anuradhapura, Medawachchiya, Vavuniya','Daily','2nd & 3rd Class Via Anuradhapura at 2:45');
+
+-- main line + north line
+
+insert into train_schedule
+values('0090','Night Mail','Vavuniya','21:30:00','Colombo-Fort','04:50:00','Vavuniya, Medawachchiya, Anuradhapura, Talawa, Galgamuwa, Maho, Ganewatta, Wellawa, Kurunegala, Potuhera, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort','Daily','2nd & 3rd Class Via Anuradhapura at 23:10');
+
+-- main line + north line
+
+insert into train_schedule
+values('0094','Intercity Train/Express','Colombo-Fort','16:45:00','Galle','19:15:00','Colombo-Fort, Slave Island, Kollutipiya, Bambalapitiya, Wellawatta, Dehiwala, Mount Lavinia, Ratmalana, Moratuwa, Panadura, Wadduwa, Kaluthara, Beruwala, Aluthgama, Bentota, Kosgoda, Balapitiya, Ambalangoda, Hikkaduwa, Galle','Daily','2nd & 3rd Class Via Hikkaduwa at 18:52');
+
+-- coastal line
+
+insert into train_schedule
+values('0095','Intercity Train/Express','Galle','07:40:00','Colombo-Fort','10:00:00','Galle, Hikkaduwa, Ambalangoda, Balapitiya, Kosgoda, Bentota, Aluthgama, Beruwala, Kaluthara, Wadduwa, Panadura, Moratuwa, Ratmalana, Mount Lavinia, Dehiwala, Wellawatta, Bambalapitiya, Kollutipiya, Slave Island, Colombo-Fort','Daily','2nd & 3rd Class 
+Via Hikkaduwa at 8:05');
+
+-- coastal line
+
+insert into train_schedule
+values('0096','Express Train','Colombo-Fort','15:55:00','Vavuniya','20:40:00','Colombo-Fort, Maradana, Dematagoda, Kelaniya, Wanawasala, Hunupitiya, Enderamulla, Horape, Ragama, Walpola, Batuwaththa, Bulugahagoda, Ganemulla, Yagoda, Gampaha, Daraluwa, Bemmulla, Magalegoda, Heendeniya Pattiyagoda, Veyangoda, Wadurawa, Keenawala, Ganegoda, Wijaya Rajadahana, Mirigama, Wilwatta, Botale, Ambepussa, Yattalgoda, Bujjomuwa, Alawwa, Walakumbura, Polgahawela, Potuhera, Kurunegala, Wellawa, Ganewatta, Maho, Galgamuwa, Talawa, Anuradhapura, Medawachchiya, Vavuniya','Daily', 'A/C and 2nd Class Via Anuradhapura at 19:40');
+
+-- main line + north line
+
+insert into train_schedule
+values('0097','Express Train','Vavuniya','05:45:00','Colombo-Fort','10:25:00','Vavuniya, Medawachchiya, Anuradhapura, Talawa, Galgamuwa, Maho, Ganewatta, Wellawa, Kurunegala, Potuhera, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort','Daily','A/C and 2nd Class Via Anuradhapura at 6:40');
+
+-- main line + north line
+
+insert into train_schedule
+values('4086', 'Long Distance', 'Anuradhapura', '05:00:00' , 'Colombo-Fort','09:55:00','Anuradhapura, Talawa, Galgamuwa, Maho, Ganewatta, Wellawa, Kurunegala, Potuhera, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort','Daily','Train Starting from Vavuniya');
+
+
+-- Colombo-Fort, Maradana, Dematagoda, Kelaniya, Wanawasala, Hunupitiya, Enderamulla, Horape, Ragama, Walpola, Batuwaththa, Bulugahagoda, Ganemulla, Yagoda, Gampaha, Daraluwa, Bemmulla, Magalegoda, Heendeniya Pattiyagoda, Veyangoda, Wadurawa, Keenawala, Ganegoda, Wijaya Rajadahana, Mirigama, Wilwatta, Botale, Ambepussa, Yattalgoda, Bujjomuwa, Alawwa, Walakumbura, Polgahawela, Potuhera, Kurunegala, Wellawa, Ganewatta, Maho, Galgamuwa, Talawa, Anuradhapura
+
+-- main line + north line
+
+insert into train_schedule
+values('4004', 'Long Distance', 'Anuradhapura', '06:40:00' , 'Colombo-Fort','10:25:00','Anuradhapura, Talawa, Galgamuwa, Maho, Ganewatta, Wellawa, Kurunegala, Potuhera, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort','Daily','Train Starting from Vavuniya');
+
+-- main line + north line
+
+insert into train_schedule
+values('4002', 'Long Distance', 'Anuradhapura', '16:55:00' , 'Colombo-Fort','20:30:00','Anuradhapura, Talawa, Galgamuwa, Maho, Ganewatta, Wellawa, Kurunegala, Potuhera, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort','Daily','Train Starting from Thandikulam ');
+
+-- main line + north line
+
+insert into train_schedule
+values('4090', 'Long Distance', 'Anuradhapura', '23:30:00' , 'Colombo-Fort','04:35:00','Anuradhapura, Talawa, Galgamuwa, Maho, Ganewatta, Wellawa, Kurunegala, Potuhera, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort', 'Daily','Train Starting from Thandikulam ');
+
+-- main line + north line
+
+insert into train_schedule
+values('1016', 'Long Distance', 'Badulla', '05:45:00' , 'Colombo-Fort','15:40:00','Badulla, Hali Ela, Uduwara, Demodara, Ella, Bandarawela, Diyatalawe, Haputale, Idalgashinna,  Ohiya, Pattipola, Ambewela, Nanu Oya, Great Western, Watagodde, Talawakelle, Kotagala, Hatton, Rozella, Watawala, Galabodde, Nawalapitiya, Ulapane, Gampola, Peradeniya, Pilimatalawa, Kadugannawa, Balana, Ihala Kotte, Gangoda, Kadigamuwa, Rambukkana, Yatagama, Tismalpola, Panaliya, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort
+', 'Daily','Train Starting from Badulla');
+
+-- main line
+
+insert into train_schedule
+values('1006', 'Long Distance', 'Badulla', '08:50:00' , 'Colombo-Fort','19:30:00','Badulla, Hali Ela, Uduwara, Demodara, Ella, Bandarawela, Diyatalawe, Haputale, Idalgashinna,  Ohiya, Pattipola, Ambewela, Nanu Oya, Great Western, Watagodde, Talawakelle, Kotagala, Hatton, Rozella, Watawala, Galabodde, Nawalapitiya, Ulapane, Gampola, Peradeniya, Pilimatalawa, Kadugannawa, Balana, Ihala Kotte, Gangoda, Kadigamuwa, Rambukkana, Yatagama, Tismalpola, Panaliya, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort','Daily','Train Starting from Badulla');
+
+-- main line
+
+insert into train_schedule
+values('1046', 'Long Distance', 'Badulla', '18:00:00' , 'Colombo-Fort','05:15:00','Badulla, Hali Ela, Uduwara, Demodara, Ella, Bandarawela, Diyatalawe, Haputale, Idalgashinna,  Ohiya, Pattipola, Ambewela, Nanu Oya, Great Western, Watagodde, Talawakelle, Kotagala, Hatton, Rozella, Watawala, Galabodde, Nawalapitiya, Ulapane, Gampola, Peradeniya, Pilimatalawa, Kadugannawa, Balana, Ihala Kotte, Gangoda, Kadigamuwa, Rambukkana, Yatagama, Tismalpola, Panaliya, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort','Daily','Train Starting from Badulla');
+
+-- main line
+
+insert into train_schedule
+values('1016', 'Long Distance', 'Bandarawela', '07:18:00' , 'Colombo-Fort', '15:40:00', 'Bandarawela, Diyatalawe, Haputale, Idalgashinna,  Ohiya, Pattipola, Ambewela, Nanu Oya, Great Western, Watagodde, Talawakelle, Kotagala, Hatton, Rozella, Watawala, Galabodde, Nawalapitiya, Ulapane, Gampola, Peradeniya, Pilimatalawa, Kadugannawa, Balana, Ihala Kotte, Gangoda, Kadigamuwa, Rambukkana, Yatagama, Tismalpola, Panaliya, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort', 'Daily','Train Starting from Badulla');
+
+-- main line
+
+insert into train_schedule
+values('1006', 'Long Distance', 'Bandarawela', '10:20:00' , 'Colombo-Fort','19:30:00','Bandarawela, Diyatalawe, Haputale, Idalgashinna,  Ohiya, Pattipola, Ambewela, Nanu Oya, Great Western, Watagodde, Talawakelle, Kotagala, Hatton, Rozella, Watawala, Galabodde, Nawalapitiya, Ulapane, Gampola, Peradeniya, Pilimatalawa, Kadugannawa, Balana, Ihala Kotte, Gangoda, Kadigamuwa, Rambukkana, Yatagama, Tismalpola, Panaliya, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort', 'Daily','Train Starting from Badulla');
+
+-- main line
+
+insert into train_schedule
+values('8050','Long Distance','Colombo-Fort','06:55:00','Aluthgama','08:34:00', 'Colombo-Fort, Slave Island, Kollutipiya, Bambalapitiya, Wellawatta, Dehiwala, Mount Lavinia, Ratmalana, Moratuwa, Panadura, Wadduwa, Kaluthara, Beruwala, Aluthgama', 'Daily', 'Train Starting from Maradana Train Runs to Matara');
+
+-- coastal line
+
+insert into train_schedule
+values('8040','Long Distance','Colombo-Fort','08:35:00','Aluthgama','09:58:00','Colombo-Fort, Slave Island, Kollutipiya, Bambalapitiya, Wellawatta, Dehiwala, Mount Lavinia, Ratmalana, Moratuwa, Panadura, Wadduwa, Kaluthara, Beruwala, Aluthgama','Daily', 'Train Starting from Colombo-Fort Train Runs to Matara');
+
+-- coastal line
+
+insert into train_schedule
+values('8086','Long Distance','Colombo-Fort','10:30:00','Aluthgama','11:54:00', 'Colombo-Fort, Slave Island, Kollutipiya, Bambalapitiya, Wellawatta, Dehiwala, Mount Lavinia, Ratmalana, Moratuwa, Panadura, Wadduwa, Kaluthara, Beruwala, Aluthgama', 'Daily', 'Train Starting from Colombo-Fort Train Runs to Matara');
+
+-- coastal line
+
+insert into train_schedule
+values('8742','Colombo Commuter','Colombo-Fort','11:15:00','Aluthgama','13:07:00', 'Colombo-Fort, Slave Island, Kollutipiya, Bambalapitiya, Wellawatta, Dehiwala, Mount Lavinia, Ratmalana, Moratuwa, Panadura, Wadduwa, Kaluthara, Beruwala, Aluthgama', 'Daily', 'Train Starting from Colombo-Fort Train Runs to Aluthgama');
+
+-- coastal line
+
+insert into train_schedule
+values('8056','Long Distance','Colombo-Fort','14:05:00','Aluthgama','15:29:00', 'Colombo-Fort, Slave Island, Kollutipiya, Bambalapitiya, Wellawatta, Dehiwala, Mount Lavinia, Ratmalana, Moratuwa, Panadura, Wadduwa, Kaluthara, Beruwala, Aluthgama', 'Daily', 'Train Starting from Maradana Train Runs to Matara');
+
+-- coastal line
+
+insert into train_schedule
+values('8751','Colombo Commuter','Colombo-Fort','14:10:00','Aluthgama','16:13:00', 'Colombo-Fort, Slave Island, Kollutipiya, Bambalapitiya, Wellawatta, Dehiwala, Mount Lavinia, Ratmalana, Moratuwa, Panadura, Wadduwa, Kaluthara, Beruwala, Aluthgama', 'Daily', 'Train Starting from Maradana Train Runs to Aluthgama');
+
+-- coastal line
+
+insert into train_schedule
+values('8058','Long Distance','Colombo-Fort','15:50:00','Aluthgama','17:03:00', 'Colombo-Fort, Slave Island, Kollutipiya, Bambalapitiya, Wellawatta, Dehiwala, Mount Lavinia, Ratmalana, Moratuwa, Panadura, Wadduwa, Kaluthara, Beruwala, Aluthgama', 'Daily', 'Train Starting from Maradana Train Runs to Matara');
+
+-- coastal line
+
+insert into train_schedule
+values('8096','Long Distance','Colombo-Fort','16:46:00','Aluthgama','18:07:00', 'Colombo-Fort, Slave Island, Kollutipiya, Bambalapitiya, Wellawatta, Dehiwala, Mount Lavinia, Ratmalana, Moratuwa, Panadura, Wadduwa, Kaluthara, Beruwala, Aluthgama', 'Monday to Friday', 'Train Starting from Maradana Train Runs to Matara');
+
+-- coastal line
+
+insert into train_schedule
+values('8097','Colombo Commuter','Colombo-Fort','17:55:00','Aluthgama','19:47:00', 'Colombo-Fort, Slave Island, Kollutipiya, Bambalapitiya, Wellawatta, Dehiwala, Mount Lavinia, Ratmalana, Moratuwa, Panadura, Wadduwa, Kaluthara, Beruwala, Aluthgama', 'Saturday and Sunday', 'Train Starting from Maradana Train Runs to Galle');
+
+-- coastal line
+
+insert into train_schedule
+values('8051','Long Distance','Colombo-Fort','06:55:00','Galle','09:48:00', 'Colombo-Fort, Slave Island, Kollutipiya, Bambalapitiya, Wellawatta, Dehiwala, Mount Lavinia, Ratmalana, Moratuwa, Panadura, Wadduwa, Kaluthara, Beruwala, Aluthgama, Bentota, Kosgoda, Balapitiya, Ambalangoda, Hikkaduwa, Galle', 'Daily', 'Train Starting from Maradana Train Runs to Matara');
+
+-- coastal line
+
+insert into train_schedule
+values('8040','Long Distance','Colombo-Fort','08:35:00','Galle','11:18:00', 'Colombo-Fort, Slave Island, Kollutipiya, Bambalapitiya, Wellawatta, Dehiwala, Mount Lavinia, Ratmalana, Moratuwa, Panadura, Wadduwa, Kaluthara, Beruwala, Aluthgama, Bentota, Kosgoda, Balapitiya, Ambalangoda, Hikkaduwa, Galle', 'Daily', 'Train Starting from Colombo-Fort Train Runs to Matara');
+
+-- coastal line (52 train routes)
+
+insert into train_schedule
+values('8086','Long Distance','Colombo-Fort','1030','Galle','1302','Daily', 'Train Starting from Colombo-Fort Train Runs to Matara');
+
+-- coastal line
+
+insert into train_schedule
+values('8056','Long Distance','Colombo-Fort','1405','Galle','1646','Daily', 'Train Starting from Maradana Train Runs to Matara');
+
+-- coastal line
+
+insert into train_schedule
+values('8058','Long Distance','Colombo-Fort','1550','Galle','1807','Daily', 'Train Starting from Maradana Train Runs to Matara');
+
+-- coastal line
+
+insert into train_schedule
+values('8096','Long Distance','Colombo-Fort','1646','Galle','1913','Monday to Friday', 'Train Starting from Maradana Train Runs to Matara');
+
+-- coastal line
+
+insert into train_schedule
+values('8050','Long Distance','Colombo-Fort','0655','Matara','1117','Daily', 'Train Starting from Maradana Train Runs to Matara');
+
+-- coastal line
+
+insert into train_schedule
+values('8040','Long Distance','Colombo-Fort','0835','Matara','1227','Daily', 'Train Starting from Colombo-Fort Train Runs to Matara');
+
+-- coastal line
+
+insert into train_schedule
+values('8086','Long Distance','Colombo-Fort','1030','Matara','1426','Daily', 'Train Starting from Colombo-Fort Train Runs to Matara');
+
+-- coastal line
+
+insert into train_schedule
+values('8056','Long Distance','Colombo-Fort','1405','Matara','1825','Daily', 'Train Starting from Maradana Train Runs to Matara');
+
+-- coastal line
+
+insert into train_schedule
+values('8058','Long Distance','Colombo-Fort','1550','Matara','1915','Daily', 'Train Starting from Maradana Train Runs to Matara');
+
+-- coastal line
+
+insert into train_schedule
+values('8766','Long Distance','Colombo-Fort','1800','Matara','2207','Monday to Friday', 'Train Starting from Maradana Train Runs to Matara');
+
+-- coastal line
+
+insert into train_schedule
+values('4085','Long Distance','Colombo-Fort','1345','Anuradhapura','1848','Daily', 'Train Starting from Colombo-Fort Train Runs to Thandikulam');
+
+-- main line + north line
+
+insert into train_schedule
+values('4003','Long Distance','Colombo-Fort','1620','Anuradhapura','2010','Daily', 'Train Starting from Colombo-Fort Train Runs to Vavuniya');
+
+-- main line + north line
+
+insert into train_schedule
+values('4089','Long Distance','Colombo-Fort','2200','Anuradhapura','0317','Daily', 'Train Starting from Colombo-Fort Train Runs to Thandikulam');
+
+-- main line + north line
+
+insert into train_schedule
+values('1005','Long Distance','Colombo-Fort','0555','Bandarawela','1436','Daily', 'Train Starting from Colombo-Fort Train Runs to Badulla');
+
+-- main line
+
+insert into train_schedule
+values('1015','Long Distance','Colombo-Fort','0945','Bandarawela','1801','Daily', 'Train Starting from Colombo-Fort Train Runs to Badulla');
+
+-- main line
+
+insert into train_schedule
+values('1045','Long Distance','Colombo-Fort','2000','Bandarawela','0537','Daily', 'Train Starting from Colombo-Fort Train Runs to Badulla');
+
+-- main line
+
+insert into train_schedule
+values('6011','Long Distance','Colombo-Fort','1030','Batticaloa','1825','Daily', 'Train Starting from Colombo-Fort Train Runs to Batticaloa');
+
+-- main line + north line + batticaloa line
+
+insert into train_schedule
+values('6079','Long Distance','Colombo-Fort','1915','Batticaloa','0400','Daily', 'Train Starting from Colombo-Fort Train Runs to Batticaloa');
+
+-- main line + north line + batticaloa line
+
+insert into train_schedule
+values('1019','Long Distance','Colombo-Fort','1035','Kandy','1352','Daily', 'Train Starting from Colombo-Fort Train Runs to Matale');
+
+-- main line + matale line
+
+insert into train_schedule
+values('1023','Long Distance','Colombo-Fort','1240','Kandy','1558','Daily', 'Train Starting from Colombo-Fort Train Runs to Hatton');
+
+-- main line + matale line
+
+insert into train_schedule
+values('1029','Long Distance','Colombo-Fort','1535','Kandy','1808','Daily', 'Train Starting from Colombo-Fort Train Runs to Kandy');
+
+-- main line + matale line
+
+insert into train_schedule
+values('1035','Long Distance','Colombo-Fort','1635','Kandy','1942','Daily', 'Train Starting from Colombo-Fort Train Runs to Kandy');
+
+-- main line + matale line
+
+insert into train_schedule
+values('1039','Long Distance','Colombo-Fort','1745','Kandy','2058','Daily', 'Train Starting from Colombo-Fort Train Runs to Kandy');
+
+-- main line + matale line
+
+insert into train_schedule
+values('4001','Long Distance','Colombo-Fort','0545','Kurunegala','0718','Daily', 'Train Starting from Colombo-Fort Train Runs to Thandikulam');
+
+-- main line + north line
+
+insert into train_schedule
+values('7081','Long Distance','Colombo-Fort','0605','Kurunegala','0605','Daily', 'Train Starting from Colombo-Fort Train Runs to Trincomalee');
+
+-- main line + north line
+
+insert into train_schedule
+values('4452','Long Distance','Colombo-Fort','0845','Kurunegala','1107','Daily', 'Train Starting from Colombo-Fort Train Runs to Anuradhapura');
+
+-- main line + north line
+
+insert into train_schedule
+values('6011','Long Distance','Colombo-Fort','1030','Kurunegala','1204','Daily', 'Train Starting from Colombo-Fort Train Runs to Batticaloa');
+
+-- main line + north line
+
+insert into train_schedule
+values('4468','Colombo Commuter','Colombo-Fort','1545','Kurunegala','1840','Daily', 'Train Starting from Colombo-Fort Train Runs to Kurunegala');
+
+-- main line + north line
+
+insert into train_schedule
+values('4469','Colombo Commuter','Colombo-Fort','1710','Kurunegala','1912','Monday to Friday', 'Train Starting from Colombo-Fort Train Runs to Kurunegala');
+
+-- main line + north line
+
+insert into train_schedule
+values('8311','Long Distance','Galle','0330','Colombo-Fort','0700','Monday to Friday', 'Train Starting from Galle Train Runs to Maradana');
+
+-- coastal line
+
+insert into train_schedule
+values('8321','Colombo Commuter','Galle','0415','Colombo-Fort','0746','Saturday and Sunday', 'Train Starting from Panadura Train Runs to Maradana');
+
+-- coastal line
+
+insert into train_schedule
+values('8085','Colombo Commuter','Galle','1055','Colombo-Fort','1320','Daily', 'Train Starting from Matara Train Runs to Colombo-Fort');
+
+-- coastal line
+
+insert into train_schedule
+values('8039','Long Distance','Galle','1430','Colombo-Fort','1713','Daily', 'Train Starting from Matara Train Runs to Colombo-Fort');
+
+-- coastal line
+
+insert into train_schedule
+values('8053','Long Distance','Galle','1345','Colombo-Fort','1634','Sunday Only', 'Train Starting from Matara Train Runs to Colombo-Fort');
+
+-- coastal line
+
+insert into train_schedule
+values('7084','Long Distance','Kurunegala','0222','Colombo-Fort','0435','Daily', 'Train Starting from Thandikulam Train Runs to Colombo-Fort');
+
+-- main line + north line
+
+insert into train_schedule
+values('4086','Long Distance','Kurunegala','0743','Colombo-Fort','0955','Daily', 'Train Starting from Vavuniya Train Runs to Colombo-Fort');
+
+-- main line + north line
+
+insert into train_schedule
+values('4086','Colombo Commuter','Kurunegala','1930','Colombo-Fort','2210','Monday to Friday', 'Train Starting from Kurunegala Train Runs to Colombo-Fort');
+
+-- main line + north line

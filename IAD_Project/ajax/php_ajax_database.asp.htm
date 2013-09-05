@@ -1,0 +1,685 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html style="height: 100%;" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><head>
+
+
+
+<title>PHP Example AJAX and MySQL</title>
+ 
+<link rel="shortcut icon" href="http://www.w3schools.com/favicon.ico" type="image/x-icon">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Keywords" content="xml,tutorial,html,dhtml,css,xsl,xhtml,javascript,asp,ado,vbscript,dom,sql,colors,soap,php,authoring,programming,training,learning,beginner's guide,primer,lessons,school,howto,reference,examples,samples,source code,tags,demos,tips,links,FAQ,tag list,forms,frames,color table,w3c,cascading style sheets,active server pages,dynamic html,internet,database,development,Web building,Webmaster,html guide">
+
+<meta name="Description" content="Free HTML XHTML CSS JavaScript DHTML XML DOM XSL XSLT RSS AJAX ASP ADO PHP SQL tutorials, references, examples for web building.">
+
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="-1">
+
+<link rel="stylesheet" type="text/css" href="php_ajax_database.asp_files/stdtheme.css">
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="php_ajax_database.asp_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{
+	obj.value=""
+	}
+}
+
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+<!--[if gt IE 7]>
+<style>
+body
+{
+overflow-y:scroll;
+}
+</style>
+<![endif]-->
+
+
+<script type="text/javascript">
+function showUser(str)
+{
+if (str=="")
+  {
+  document.getElementById("txtHint").innerHTML="";
+  return;
+  }  
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","getuser.php?q="+str,true);
+xmlhttp.send();
+}
+</script>
+<style>.azurebubble,.azurebubble *{border:0 none;border-collapse:collapse;border-spacing:0;margin:0;padding:0;}.azurebubble .bubr1 .bubd1{height:7px;width:7px;background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/topleft.png);background-position:right bottom;background-repeat:no-repeat;}.azurebubble .bubr1 .bubd2{background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/top.png);background-position:left bottom;background-repeat:repeat-x;position:relative;}.goog-bubble-bottomarrow .bubr1 .bubd2 span{width:17px;height:7px;border:0;display:inline-block;background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/arrowup.png);position:absolute;top:0;}.goog-bubble-toparrow .bubr3 .bubd2 span{width:17px;height:7px;border:0;display:inline-block;background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/arrowdown.png);position:absolute;top:0;}.azurebubble .bubr1 .bubd3{height:7px;width:7px;background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/topright.png);background-position:left bottom;background-repeat:no-repeat;}.goog-bubble-rightarrow .bubr2 .bubd1 span{width:7px;height:17px;border:0;display:inline-block;background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/arrowleft.png);position:absolute;left:0;background-position:right center;}.azurebubble .bubr2 .bubd1{background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/left.png);background-repeat:repeat-y;background-position:right center;}.goog-bubble-leftarrow .bubr2 .bubd3 span{width:7px;height:17px;border:0;display:inline-block;background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/arrowright.png);position:absolute;left:0;}.azurebubble .bubr2 .bubd3{background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/right.png);background-repeat:repeat-y;}.azurebubble .bubr3 .bubd1{height:7px;width:7px;background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/botleft.png);background-position:right top;background-repeat:no-repeat;}.azurebubble .bubr3 .bubd2{background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/bot.png);background-repeat:repeat-x;position:relative;}.azurebubble .bubr3 .bubd3{height:7px;width:7px;background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/botright.png);}.azurebubble .relwrapper{position:relative;}.azurebubble .bubble_content{position:relative;border:0;z-index:10000;margin:0;padding:0;}.azurebubble .bubble_content iframe{position:absolute;border:0;z-index:10000;margin:0;padding:0;}.bubr1 .relwrapper,.bubr3 .relwrapper{height:7px;}</style><link href="php_ajax_database.asp_files/translateelement.css" charset="UTF-8" rel="stylesheet" type="text/css"><script src="php_ajax_database.asp_files/main.js" charset="UTF-8" type="text/javascript"></script></head><body style="position: relative; min-height: 100%; top: 0px;">
+
+<center>
+<table style="width: 960px; margin-top: 0px; margin-bottom: 0px;" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td align="center"><a name="top"></a>
+<table style="margin-top: 5px;" border="0" cellpadding="0" cellspacing="0" width="960">
+<tbody><tr>
+<td align="left">
+	<a href="http://www.w3schools.com/"><img src="php_ajax_database.asp_files/w3schoolslogo.gif" alt="W3Schools.com" style="margin-top: 5px;" border="0" width="336" height="69"></a>
+</td>
+<td align="right">
+	<br>
+
+<div style="width: 200px; height: 25px; float: right; text-align: right;">
+<div id="google_translate_element" style="display: none;"><div style="" class="skiptranslate goog-te-gadget"><div class="goog-te-gadget-simple" style="white-space: nowrap;" id=":1.targetLanguage"><img style="background-image: url(&quot;http://translate.googleapis.com/translate_static/img/te_ctrl3.gif&quot;); background-position: -65px 0px;" class="goog-te-gadget-icon" src="php_ajax_database.asp_files/cleardot.gif"><span style="vertical-align: middle;"><a href="javascript:void(0)" class="goog-te-menu-value"><span>Select Language</span><img src="php_ajax_database.asp_files/cleardot.gif" width="1" height="1"><span style="border-left: 1px solid rgb(187, 187, 187);">&#8203;</span><img src="php_ajax_database.asp_files/cleardot.gif" width="1" height="1"><span style="color: rgb(155, 155, 155);">&#9660;</span></a></span></div></div></div>
+<div id="translate_link">
+<a href="#" class="topnav" onclick="document.getElementById('google_translate_element').style.display='inline';document.getElementById('translate_link').style.display='none';return false;">
+TRANSLATE
+</a>
+</div>
+</div>
+	<br>
+	<br>
+	<form style="font-size: 11px;" method="get" name="searchform" action="http://www.google.com/search" target="_blank">
+	<table border="0" cellpadding="0" cellspacing="0"><tbody><tr>
+	<td><input name="sitesearch" value="www.w3schools.com" type="hidden"></td>
+	<td><input onfocus="searchfield_focus(this)" style="width: 150px; color: rgb(128, 128, 128); font-style: italic;" alt="search" name="as_q" size="20" value="Search w3schools.com" type="text"></td>
+	<td><input value="Search" title="Search" type="submit"></td>
+	</tr></tbody></table>
+	</form>
+</td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</tbody></table>
+<table id="topnav" border="0" cellpadding="0" cellspacing="3" width="960">
+<tbody><tr>
+<td style="width: 500px; word-spacing: 12px; font-size: 90%; padding-left: 12px; padding-right: 10px; white-space: nowrap;" align="left">
+	<a class="topnav" href="http://www.w3schools.com/default.asp" target="_top">HOME </a>
+	<a class="topnav" href="http://www.w3schools.com/html/default.asp" target="_top">HTML </a>
+	<a class="topnav" href="http://www.w3schools.com/css/default.asp" target="_top">CSS </a>
+	<a class="topnav" href="http://www.w3schools.com/xml/default.asp" target="_top">XML </a>
+	<a class="topnav" href="http://www.w3schools.com/js/default.asp" target="_top">JAVASCRIPT </a>
+	<a class="topnav" href="http://www.w3schools.com/asp/default.asp" target="_top">ASP </a>
+	<a class="topnav" href="http://www.w3schools.com/php/default.asp" target="_top">PHP </a>
+	<a class="topnav" href="http://www.w3schools.com/sql/default.asp" target="_top">SQL </a>	
+	<a class="topnav" href="http://www.w3schools.com/sitemap/sitemap_tutorials.asp" target="_top">MORE...</a>
+</td>
+<td style="word-spacing: 6px; font-size: 80%; padding-right: 10px; color: rgb(136, 136, 136); white-space: nowrap;" align="right">
+	<a class="topnav" href="http://www.w3schools.com/sitemap/sitemap_references.asp" target="_top">REFERENCES</a> |
+	<a class="topnav" href="http://www.w3schools.com/sitemap/sitemap_examples.asp" target="_top">EXAMPLES</a> |
+	<a class="topnav" href="http://www.w3schools.com/forum/default.asp" target="_top">FORUM</a> |
+	<a class="topnav" href="http://www.w3schools.com/about/default.asp" target="_top">ABOUT</a>	
+</td>
+</tr>
+</tbody></table>
+
+<div style="width: 960px; height: 94px; position: relative; margin: 0px; padding: 0px; overflow: hidden;">
+
+<div class="toprect_txt">
+<b>W3SCHOOLS BOOKS</b><br><br>
+<a target="_blank" href="http://www.w3schools.com/books/default.asp">
+New Books:<br>HTML, CSS<br>
+JavaScript, and Ajax</a>
+
+</div><div style="width: 728px; height: 90px; position: absolute; right: 0px; top: 0px;">
+<iframe id="leaderframe" style="background-color: rgb(255, 255, 255); height: 90px; width: 728px;" src="php_ajax_database.asp_files/leaderframe.htm" marginwidth="0" marginheight="0" width="728" frameborder="0" height="90" scrolling="no">
+Your browser does not support inline frames or is currently configured not to display inline frames.
+</iframe>
+</div></div>
+
+<table style="padding: 0pt;" border="0" cellpadding="0" cellspacing="0" width="960">
+<tbody><tr><td id="leftcolumn" align="left" valign="top" width="171">
+<div style="margin-left: 1px; margin-top: 5px;"><h2 class="left"><span class="left_h2">PHP</span> Basic</h2>
+<a target="_top" href="http://www.w3schools.com/PHP/default.asp">PHP HOME</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_intro.asp">PHP Intro</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_install.asp">PHP Install</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_syntax.asp">PHP Syntax</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_variables.asp">PHP Variables</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_string.asp">PHP String</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_operators.asp">PHP Operators</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_if_else.asp">PHP If...Else</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_switch.asp">PHP Switch</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_arrays.asp">PHP Arrays</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_looping.asp">PHP While Loops</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_looping_for.asp">PHP For Loops</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_functions.asp">PHP Functions</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_forms.asp">PHP Forms</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_get.asp">PHP $_GET</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_post.asp">PHP $_POST</a><br>
+<br>
+<h2 class="left"><span class="left_h2">PHP</span> Advanced</h2>
+<a target="_top" href="http://www.w3schools.com/PHP/php_date.asp">PHP Date</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_includes.asp">PHP Include</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_file.asp">PHP File</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_file_upload.asp">PHP File Upload</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_cookies.asp">PHP Cookies</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_sessions.asp">PHP Sessions</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_mail.asp">PHP E-mail</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_secure_mail.asp">PHP Secure E-mail</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_error.asp">PHP Error</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_exception.asp">PHP Exception</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_filter.asp">PHP Filter</a><br>
+<br>  
+<h2 class="left"><span class="left_h2">PHP</span> Database</h2>
+<a target="_top" href="http://www.w3schools.com/PHP/php_mysql_intro.asp">MySQL Introduction</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_mysql_connect.asp">MySQL Connect</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_mysql_create.asp">MySQL Create</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_mysql_insert.asp">MySQL Insert</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_mysql_select.asp">MySQL Select</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_mysql_where.asp">MySQL Where</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_mysql_order_by.asp">MySQL Order By</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_mysql_update.asp">MySQL Update</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_mysql_delete.asp">MySQL Delete</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_db_odbc.asp">PHP ODBC</a><br>
+<br>
+<h2 class="left"><span class="left_h2">PHP</span> XML</h2>
+<a target="_top" href="http://www.w3schools.com/PHP/php_xml_parser_expat.asp">XML Expat Parser</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_xml_dom.asp">XML DOM</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_xml_simplexml.asp">XML SimpleXML</a><br>
+<br>
+<h2 class="left"><span class="left_h2">PHP</span> and AJAX</h2>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ajax_intro.asp">AJAX Intro</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ajax_php.asp">AJAX PHP</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ajax_database.asp" style="font-weight: bold;">AJAX Database</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ajax_xml.asp">AJAX XML</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ajax_livesearch.asp">AJAX Live Search</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ajax_rss_reader.asp">AJAX RSS Reader</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ajax_poll.asp">AJAX Poll</a><br>
+<br>
+<h2 class="left"><span class="left_h2">PHP</span> Reference</h2>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ref_array.asp">PHP Array</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ref_calendar.asp">PHP Calendar</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ref_date.asp">PHP Date</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ref_directory.asp">PHP Directory</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ref_error.asp">PHP Error</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ref_filesystem.asp">PHP Filesystem</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ref_filter.asp">PHP Filter</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ref_ftp.asp">PHP FTP</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ref_http.asp">PHP HTTP</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ref_libxml.asp">PHP Libxml</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ref_mail.asp">PHP Mail</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ref_math.asp">PHP Math</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ref_misc.asp">PHP Misc</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ref_mysql.asp">PHP MySQL</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ref_simplexml.asp">PHP SimpleXML</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ref_string.asp">PHP String</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ref_xml.asp">PHP XML</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_ref_zip.asp">PHP Zip</a><br>
+<br>
+<h2 class="left"><span class="left_h2">PHP</span> Quiz</h2>
+<a target="_top" href="http://www.w3schools.com/PHP/php_quiz.asp">PHP Quiz</a><br>
+<a target="_top" href="http://www.w3schools.com/PHP/php_exam.asp">PHP Certificate</a><br>
+
+<!--
+<h2 class="left"><span class="left_h2">PHP</span> XML</h2>
+<a target="_top" href="php_xml_parser.asp" >PHP Expat</a><br />
+<a target="_top" href="php_xml.asp" >PHP XML</a><br />
+<br />
+<h2 class="left"><span class="left_h2">PHP</span> Software</h2>
+<a target="_top" href="php_zend.asp" >Zend Studio</a><br />
+--></div>
+</td>
+<td align="left" valign="top">
+<table style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); padding-bottom: 8px; padding-right: 5px;" border="0" cellpadding="0" cellspacing="0" width="639">
+<tbody><tr>
+<td style="padding-top: 4px;">
+
+<h1>PHP - <span class="color_h1">AJAX and MySQL</span></h1>
+<table class="chapter" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+<td class="prev"><a class="chapter" href="http://www.w3schools.com/PHP/php_ajax_php.asp">« Previous</a></td>
+<td class="next"><a class="chapter" href="http://www.w3schools.com/PHP/php_ajax_xml.asp">Next Chapter »</a></td>
+</tr></tbody></table>
+<hr>
+<p class="intro">AJAX can be used for interactive communication with a database.</p>
+<hr>
+<h2>AJAX Database Example</h2>
+<p>The following example will demonstrate how a web page can fetch information from a database with AJAX:</p>
+
+<table class="example" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td>
+<h2 class="example">Example</h2>
+<table style="border: 1px solid rgb(212, 212, 212); background: none repeat scroll 0% 0% white;" border="0" cellpadding="3" cellspacing="0" width="100%">
+<tbody><tr><td>
+<form action=""> 
+<select name="users" onchange="showUser(this.value)">
+<option selected="selected" value="">Select a person:</option>
+<option value="1">Peter Griffin</option>
+<option value="2">Lois Griffin</option>
+<option value="3">Joseph Swanson</option>
+<option value="4">Glenn Quagmire</option>
+</select>
+</form>
+<br>
+<div id="txtHint"></div>
+</td></tr></tbody></table>
+<br>
+</td></tr>
+</tbody></table>
+<br>
+<hr>
+
+<h2>Example Explained - The MySQL Database</h2>
+<p>The database table we use in the example above looks like this:</p>
+<table class="reference" border="1" cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr>
+		<th align="left">id</th>
+		<th align="left">FirstName</th>
+		<th align="left">LastName</th>
+		<th align="left">Age</th>
+		<th align="left">Hometown</th>
+		<th align="left">Job</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>Peter</td>
+		<td>Griffin</td>
+		<td>41</td>
+		<td>Quahog</td>
+		<td>Brewery</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>Lois</td>
+		<td>Griffin</td>
+		<td>40</td>
+		<td>Newport</td>
+		<td>Piano Teacher</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Joseph</td>
+		<td>Swanson</td>
+		<td>39</td>
+		<td>Quahog</td>
+		<td>Police Officer</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>Glenn</td>
+		<td>Quagmire</td>
+		<td>41</td>
+		<td>Quahog</td>
+		<td>Pilot</td>
+	</tr>
+</tbody></table>
+<p>
+</p><hr>
+
+<h2>Example Explained - The HTML Page</h2>
+<p>When a user selects a user in the dropdown list above, a function called "showUser()" is executed. The 
+function is triggered by the "onchange" event:</p> 
+
+<table class="code notranslate" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td>
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;script type="text/javascript"&gt;<br>
+function showUser(str)<br>
+{<br>
+if (str=="")<br>
+&nbsp; {<br>
+&nbsp; document.getElementById("txtHint").innerHTML="";<br>
+&nbsp; return;<br>
+&nbsp; } <br>
+if (window.XMLHttpRequest)<br>
+&nbsp; {// code for IE7+, Firefox, Chrome, Opera, Safari<br>
+&nbsp; xmlhttp=new XMLHttpRequest();<br>
+&nbsp; }<br>
+else<br>
+&nbsp; {// code for IE6, IE5<br>
+&nbsp; xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");<br>
+&nbsp; }<br>
+xmlhttp.onreadystatechange=function()<br>
+&nbsp; {<br>
+&nbsp; if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)<br>
+&nbsp;&nbsp;&nbsp; {<br>
+&nbsp;&nbsp;&nbsp; document.getElementById("txtHint").innerHTML=xmlhttp.responseText;<br>
+&nbsp;&nbsp;&nbsp; }<br>
+&nbsp; }<br>
+xmlhttp.open("GET","getuser.php?q="+str,true);<br>
+xmlhttp.send();<br>
+}<br>
+&lt;/script&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+<br>
+&lt;form&gt;<br>
+&lt;select name="users" onchange="showUser(this.value)"&gt;<br>
+&lt;option value=""&gt;Select a person:&lt;/option&gt;<br>
+&lt;option value="1"&gt;Peter Griffin&lt;/option&gt;<br>
+&lt;option value="2"&gt;Lois Griffin&lt;/option&gt;<br>
+&lt;option value="3"&gt;Glenn Quagmire&lt;/option&gt;<br>
+&lt;option value="4"&gt;Joseph Swanson&lt;/option&gt;<br>
+&lt;/select&gt;<br>
+&lt;/form&gt;<br>
+&lt;br /&gt;<br>
+&lt;div id="txtHint"&gt;&lt;b&gt;Person info will be listed here.&lt;/b&gt;&lt;/div&gt;<br>
+<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+</td></tr>
+</tbody></table>
+
+<p>The showUser() function does the following:</p>
+<ul>
+	<li>Check if a person is selected</li>
+	<li>Create an XMLHttpRequest object</li>
+	<li>Create the function to be executed when the server response is ready</li>
+	<li>Send the request off to a file on the server</li>
+	<li>Notice that a parameter (q) is added to the URL (with the content of the 
+	dropdown list)</li>
+</ul>
+
+<hr>
+<h2>The PHP File</h2>
+
+<p>The page on the server called by the JavaScript above is a PHP file called "getuser.php".</p>
+<p>The source code in "getuser.php" runs a query against a MySQL database, and returns the result in an HTML 
+table:</p>
+
+<table class="code notranslate" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td>
+&lt;?php<br>
+$q=$_GET["q"];<br>
+<br>
+$con = mysql_connect('localhost', 'peter', 'abc123');<br>
+if (!$con)<br>
+&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;die('Could not connect: ' . mysql_error());<br>
+&nbsp;&nbsp;}<br>
+<br>
+mysql_select_db("ajax_demo", $con);<br>
+<br>
+$sql="SELECT * FROM user WHERE id = '".$q."'";<br>
+<br>
+$result = mysql_query($sql);<br>
+<br>
+echo "&lt;table border='1'&gt;<br>
+&lt;tr&gt;<br>
+&lt;th&gt;Firstname&lt;/th&gt;<br>
+&lt;th&gt;Lastname&lt;/th&gt;<br>
+&lt;th&gt;Age&lt;/th&gt;<br>
+&lt;th&gt;Hometown&lt;/th&gt;<br>
+&lt;th&gt;Job&lt;/th&gt;<br>
+&lt;/tr&gt;";<br>
+<br>
+while($row = mysql_fetch_array($result))<br>
+&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;echo "&lt;tr&gt;";<br>
+&nbsp;&nbsp;echo "&lt;td&gt;" . $row['FirstName'] . "&lt;/td&gt;";<br>
+&nbsp;&nbsp;echo "&lt;td&gt;" . $row['LastName'] . "&lt;/td&gt;";<br>
+&nbsp;&nbsp;echo "&lt;td&gt;" . $row['Age'] . "&lt;/td&gt;";<br>
+&nbsp;&nbsp;echo "&lt;td&gt;" . $row['Hometown'] . "&lt;/td&gt;";<br>
+&nbsp;&nbsp;echo "&lt;td&gt;" . $row['Job'] . "&lt;/td&gt;";<br>
+&nbsp;&nbsp;echo "&lt;/tr&gt;";<br>
+&nbsp;&nbsp;}<br>
+echo "&lt;/table&gt;";<br>
+<br>
+mysql_close($con);<br>
+?&gt;
+</td></tr>
+</tbody></table>
+<p>Explanation: When the query is sent from the JavaScript to the PHP file, the following 
+happens:</p>
+<ol>
+	<li>PHP opens a connection to a MySQL server</li>
+	<li>The correct person is found</li>
+	<li>An HTML table is created, filled with data, and sent back to the "txtHint" 
+	placeholder</li>
+</ol>
+<br>
+<table class="chapter" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+<td class="prev"><a class="chapter" href="http://www.w3schools.com/PHP/php_ajax_php.asp">« Previous</a></td>
+<td class="next"><a class="chapter" href="http://www.w3schools.com/PHP/php_ajax_xml.asp">Next Chapter »</a></td>
+</tr></tbody></table>
+
+<hr>
+
+<!-- **** SPOTLIGHTS 1 **** -->
+
+<h2><a class="header" target="_blank" rel="nofollow" href="http://www.wix.com/start/matrix/?utm_campaign=w3&amp;experiment_id=ma_w500">
+Free Online Website Builder - No Downloading Needed</a></h2>
+<p>Create a free Flash website with our simple, online web design editing platform. Stunning templates
+and user-friendly tools make website building easy and fun.</p>
+<p><a target="_blank" rel="nofollow" href="http://www.wix.com/start/matrix/?utm_campaign=w3&amp;experiment_id=ma_w500">
+Start Creating your free website now!</a></p>
+<hr>
+
+<!-- **** SPOTLIGHTS 2 **** -->
+
+<h2><a target="_blank" rel="nofollow" href="http://www.altova.com/ref/?s=w3s_spotlight&amp;q=missionkitxml">
+Altova® MissionKit® - Integrated Suite of XML Tools</a></h2>
+<a target="_blank" rel="nofollow" href="http://www.altova.com/ref/?s=w3s_spotlight&amp;q=missionkitxml">
+<img src="php_ajax_database.asp_files/altova_missionkit_2011.gif" alt="Altova MissionKit" border="0"></a><br>
+<p>The Altova MissionKit is an integrated suite of tools ideal for:</p>
+<table>
+<tbody><tr>
+<td align="left" valign="top">
+<ul>
+<li>XML development</li>
+<li>Web &amp; Web services development</li>
+<li>Data mapping &amp; integration</li>
+<li>Rendering &amp; publishing XML &amp; database data</li>
+<li>XBRL validation, taxonomy editing, transformation &amp; rendering</li>
+<li>Chart &amp; report generation for XML &amp; XBRL</li>
+</ul>
+<p>The MissionKit for XML Developers includes XMLSpy® - the industry-leading XML editor; MapForce® - a
+graphical data mapping, conversion, and integration tool; StyleVision® - a visual XSLT stylesheet and report designer;
+DiffDog® - an XML-aware diff/merge tool; and 2 additional tools.</p>
+<p>Try all 6 products free for 30 days!</p>
+<p><a target="_blank" rel="nofollow" href="http://www.altova.com/ref/?s=w3s_spotlight&amp;q=missionkitxml">
+<b>Download a fully-functional free trial</b></a></p>
+</td>
+<td width="5">&nbsp;</td>
+<td align="right" valign="top" width="205">
+<a target="_blank" rel="nofollow" href="http://www.altova.com/ref/?s=w3s_spotlight&amp;q=missionkitxml">
+<img src="php_ajax_database.asp_files/xml-editor.gif" alt="Altova Missionkit" border="0"></a>
+</td>
+</tr>
+</tbody></table>
+<hr>
+
+<!-- **** SPOTLIGHTS 3 **** -->
+
+<script type="text/javascript"><!--
+document.write('<table cellpadding="0" cellspacing="0"><tr><td width="108">&nbsp;</td><td>');
+google_ad_client = "pub-3440800076797949";
+/*txt*/
+google_ad_slot = "1699448869";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script><table cellpadding="0" cellspacing="0"><tbody><tr><td width="108">&nbsp;</td><td>
+<script type="text/javascript" src="leaderframe_data/show_ads.js">
+</script><script src="leaderframe_data/show_ads_impl.js"></script><script src="iframes_api_loader_data/gcm_392279366d8656daff9da175563f505a.js"></script><script src="php_ajax_database.asp_files/expansion_embed.js"></script><script src="leaderframe_data/test_domain.js"></script><script>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</script><ins style="display: inline-table; border: medium none; height: 280px; margin: 0pt; padding: 0pt; position: relative; visibility: visible; width: 336px;"><ins id="google_ads_frame1_anchor" style="display: block; border: medium none; height: 280px; margin: 0pt; padding: 0pt; position: relative; visibility: visible; width: 336px;"><iframe allowtransparency="true" hspace="0" id="google_ads_frame1" marginheight="0" marginwidth="0" name="google_ads_frame1" src="php_ajax_database.asp_files/ads.htm" style="left: 0pt; position: absolute; top: 0pt;" vspace="0" width="336" frameborder="0" height="280" scrolling="no"></iframe></ins></ins>
+<script type="text/javascript">
+<!--
+document.write("</td></tr></table>");
+//-->
+</script></td></tr></tbody></table>
+
+<hr>
+<center>
+<iframe id="w3schools_lq2" name="w3schools_lq2" style="background-color: rgb(255, 255, 255);" src="php_ajax_database.asp_files/aspallbannerframe.htm" marginwidth="0" marginheight="0" width="468" frameborder="0" height="60" scrolling="no">
+Your browser does not support inline frames or is currently configured not to display inline frames.
+</iframe>
+</center>
+
+</td></tr>
+</tbody></table>
+</td>
+
+<td id="rightcolumn" align="center" valign="top" width="150">
+<table cellspacing="0">
+<tbody><tr><th>WEB HOSTING</th></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.lunarpages.com/">Best Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.eukhost.com/">PHP MySQL Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.web-hosting-top.com/">Top 10 Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.heartinternet.co.uk/index.shtml">UK Reseller Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.webhosting.uk.com/cloud-hosting.php">Cloud Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://stats.justhost.com/track?c878c3580275f4db3720fbc777a282233">Top Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.doteasy.com/">Free Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.ait.com/landing/w3schools_land_01.php">Host Your Clients</a>
+</td></tr>
+</tbody></table>
+
+<table cellspacing="0">
+<tbody><tr><th>WEB BUILDING</th></tr>
+<tr><td>
+
+<a target="_blank" rel="nofollow" href="http://www.altova.com/ref/?s=w3s_text&amp;q=xmlspy">Download XML Editor</a>
+
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.wix.com/start/wfree?utm_campaign=w3&amp;experiment_id=w300">FREE Flash Website</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.dreamtemplate.com/?ref=w3txtfree">6,000+ HTML Templates<br>Download now (FREE)</a>
+</td></tr>
+<tr><td>
+<a rel="nofollow" target="_blank" href="http://ad.doubleclick.net/jump/N5295.126117.W3SCHOOLS/B4926266.3;sz=1x1;ord=0.6841664?">
+Advertise on Google<br>
+Stand out on Google search and maps
+<img src="php_ajax_database.asp_files/B4926266.gif" alt="Click Here" border="0" width="1" height="1"></a>
+
+</td></tr>
+</tbody></table>
+
+<table cellspacing="0">
+<tbody><tr><th>W3SCHOOLS EXAMS</th></tr>
+<tr><td>
+<a target="_blank" href="http://www.w3schools.com/cert/default.asp">Get Certified in:<br>HTML, CSS, JavaScript, XML, PHP, and ASP</a>
+</td></tr>
+</tbody></table>
+
+<table cellspacing="0">
+<tbody><tr><th>W3SCHOOLS BOOKS</th></tr>
+<tr><td>
+<a target="_blank" href="http://www.w3schools.com/books/default.asp">
+New Books:<br>HTML, CSS<br>
+JavaScript, and Ajax</a>
+</td></tr>
+</tbody></table>
+
+<table cellspacing="0">
+<tbody><tr><th>STATISTICS</th></tr>
+<tr><td>
+<a target="_top" href="http://www.w3schools.com/browsers/browsers_stats.asp">Browser Statistics</a><br>
+<a target="_top" href="http://www.w3schools.com/browsers/browsers_os.asp">Browser OS</a><br>
+<a target="_top" href="http://www.w3schools.com/browsers/browsers_display.asp">Browser Display</a>
+</td></tr></tbody></table>
+
+<script type="text/javascript">
+<!--
+function sharethis()
+{
+txt='<a href="http://www.facebook.com/sharer.php?u='+document.URL+'" target="_blank" title="Facebook">'
+txt=txt+'<img src="/images/share_facebook.gif" border="0" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://twitter.com/home?status=Currently reading '+document.URL+'" target="_blank" title="Twitter">';
+txt=txt+'<img src="/images/share_twitter.gif" border="0" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="mailto:?&amp;subject='+document.title+'&amp;body=Take%20a%20look%20at%20this%20page%20at%20W3Schools.com:%20'+document.URL+'" target="_blank" title="E-mail">';
+txt=txt+'<img src="/images/share_email.gif" border="0" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://delicious.com/save?v=5&noui&jump=close&url='+document.URL+'&title='+document.title+'" target="_blank" title="Delicious">';
+txt=txt+'<img src="/images/share_delicious.gif" border="0" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.reddit.com/submit?url='+document.URL+'" target="_blank" title="Reddit">';
+txt=txt+'<img src="/images/share_reddit.gif" border="0" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://digg.com/submit?url='+document.URL+'&amp;title='+document.title+'" target="_blank" title="Digg">';
+txt=txt+'<img src="/images/share_digg.gif" border="0" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.stumbleupon.com/submit?url='+document.URL+'%26title%3D'+document.title+'" target="_blank" title="Stumbleupon">';
+txt=txt+'<img src="/images/share_stumbleupon.gif" border="0" width="16px" height="16px" /></a>';
+document.getElementById("sharethis").innerHTML=txt;
+}
+//--></script>
+<table cellspacing="0">
+<tbody><tr><th>SHARE THIS PAGE</th></tr>
+<tr>
+<td id="sharethis">
+<div style="height: 16px;">
+<a href="#" onclick="sharethis();return false;">Share with »</a>
+</div>
+</td>
+</tr>
+</tbody></table>
+
+
+</td></tr></tbody></table>
+
+</td>
+</tr></tbody></table>
+</center>
+
+<table id="footer" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td align="center">
+	<table align="center" border="0" width="960">
+	<tbody><tr>
+	<td align="left" width="200">
+		<a href="http://www.w3schools.com/"><img src="php_ajax_database.asp_files/w3schoolscom_gray.gif" alt="W3Schools.com" border="0"></a>
+	</td>
+	<td style="word-spacing: 6px; font-size: 80%; padding-right: 10px;" align="right">
+		<a href="http://www.w3schools.com/default.asp" target="_top">HOME</a> |
+		<a href="#top" target="_top">TOP</a> |
+		<a href="http://www.w3schools.com/PHP/php_ajax_database.asp?output=print" target="_blank">PRINT</a> |
+		<a href="http://www.w3schools.com/forum/default.asp" target="_blank">FORUM</a> |
+		<a href="http://www.w3schools.com/about/default.asp" target="_top">ABOUT</a>
+	</td>
+	</tr>
+	<tr>
+	<td colspan="2" style="padding-top: 10px; color: rgb(64, 64, 64);" align="center" valign="top">
+		W3Schools is for training only. We do not warrant the correctness of its content.
+		The risk from using it lies entirely with the user.
+		<br>
+		While using this site, you agree to have read and accepted our
+		<a href="http://www.w3schools.com/about/about_copyright.asp">terms of use</a> and
+		<a href="http://www.w3schools.com/about/about_privacy.asp">privacy policy</a>.<br>
+		<a href="http://www.w3schools.com/about/about_copyright.asp">Copyright 1999-2010</a> by Refsnes Data. All Rights Reserved.
+	</td>
+	</tr>
+	</tbody></table>
+	<br>
+</td>
+</tr>
+</tbody></table>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,    
+    gaTrack: true,
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+</script><script src="php_ajax_database.asp_files/element.js" type="text/javascript"></script>
+
+<div id=":0.balloonContainer" style="position: absolute; z-index: 1073741824; top: -9999em; display: none;"><iframe id=":0.container" class="goog-te-balloon-frame skiptranslate" src="javascript:''" style="visibility: visible;" frameborder="0"></iframe></div><div style="position: absolute; top: -1000px; height: 1px; width: 1px;"><object id="fI0gh1j4vaq" name="fI0gh1j4vaq" type="application/x-shockwave-flash" data="php_ajax_database.asp_files/hrs.swf" width="400" height="500"><param name="allowScriptAccess" value="always"></object></div><iframe style="visibility: visible; -moz-box-sizing: content-box; width: 472px; height: 274px; display: none;" class="goog-te-menu-frame skiptranslate" frameborder="0"></iframe></body></html>

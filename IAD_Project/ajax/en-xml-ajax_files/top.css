@@ -1,0 +1,46 @@
+#logo
+{
+	position:absolute;
+	top:14px;
+	left:32px;
+	background-image: url(xul.png);
+	background-repeat: no-repeat;
+	padding:0 0 0 0;
+	width:82px;
+	height:32px;
+}
+
+#ajax
+{
+	position:absolute;
+	top:18px;
+	left: 120px;
+	background-image: url(ajax.png);
+	background-repeat: no-repeat;
+	padding:0 0 0 0;
+	width:54px;
+	height:24px;
+}
+
+#shade
+{
+	position:absolute;
+	top:0;
+	background-color: white;
+	background-image: url(xul-shade.jpg);
+	background-repeat: repeat-y;
+	height: 40px;
+	width:100%;
+}
+
+#antishade
+{
+	position:absolute;
+	top:40px;
+	background-color: #33CC00;
+	background-image: url(xul-antishade.jpg);
+	background-repeat: repeat-y;
+	height: 20px;
+	width:100%;
+}
+

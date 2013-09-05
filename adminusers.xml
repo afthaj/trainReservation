@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<adminusers>
+  <adminuser>
+  	<adminID/>
+	<username/>
+	<password/>
+	<joinDate/>
+	<firstname/>
+	<othernames/>
+	<lastname/>
+	<gender/>
+	<dob/>
+	<age/>
+	<address/>
+	<telephoneNumber/>
+	<emailAddress/>
+  </adminuser>
+<adminuser><adminID>1</adminID><username>admin</username><password>123</password><joinDate>2010-12-27 23:04:35</joinDate><firstname>Admin</firstname><othernames>Middle</othernames><lastname>User</lastname><gender>M</gender><dob>1988-11-18</dob><age>22</age><address>Thalangama, Battaramulla</address><telephoneNumber>0777746692</telephoneNumber><emailAddress>afthajaldin@yahoo.com</emailAddress></adminuser></adminusers>

@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+#top
+{
+	background:black;
+	width:auto;
+	height:auto;
+	border:solid;	
+}
+
+.img_left
+{
+	
+	width:auto;
+	height:200px;	
+	
+}
+
+.img_right
+{
+	background:url(images/b1.gif) top right no-repeat;
+	width:auto;
+	height:200px;
+	
+}

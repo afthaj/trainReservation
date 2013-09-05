@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<users>
+<user>
+<usernames>aftha</usernames>
+<passwords>123</passwords>
+</user>
+<user>
+<usernames>rajitha</usernames>
+<passwords>456</passwords>
+</user>
+<user>
+<usernames>milinda</usernames>
+<passwords>789</passwords>
+</user>
+</users>

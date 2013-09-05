@@ -1,0 +1,75 @@
+Main Line:
+Colombo-Fort, Maradana, Dematagoda, Kelaniya, Wanawasala, Hunupitiya, Enderamulla, Horape, Ragama, Walpola, Batuwaththa, Bulugahagoda, Ganemulla, Yagoda, Gampaha, Daraluwa, Bemmulla, Magalegoda, Heendeniya Pattiyagoda, Veyangoda, Wadurawa, Keenawala, Ganegoda, Wijaya Rajadahana, Mirigama, Wilwatta, Botale, Ambepussa, Yattalgoda, Bujjomuwa, Alawwa, Walakumbura, Polgahawela, Panaliya, Tismalpola, Yatagama, Rambukkana, Kadigamuwa, Gangoda, Ihala Kotte, Balana, Kadugannawa, Pilimatalawa, Peradeniya, Gampola, Ulapane, Nawalapitiya, Galabodde, Watawala, Rozella, Hatton, Kotagala, Talawakelle, Watagodde, Great Western, Nanu Oya, Ambewela, Pattipola, Ohiya, Idalgashinna, Haputale, Diyatalawe, Bandarawela, Ella, Demodara, Uduwara, Hali Ela, Badulla
+
+Main Line reversed:
+Badulla, Hali Ela, Uduwara, Demodara, Ella, Bandarawela, Diyatalawe, Haputale, Idalgashinna,  Ohiya, Pattipola, Ambewela, Nanu Oya, Great Western, Watagodde, Talawakelle, Kotagala, Hatton, Rozella, Watawala, Galabodde, Nawalapitiya, Ulapane, Gampola, Peradeniya, Pilimatalawa, Kadugannawa, Balana, Ihala Kotte, Gangoda, Kadigamuwa, Rambukkana, Yatagama, Tismalpola, Panaliya, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort
+
+Colombo-Fort - Kandy:
+Colombo-Fort, Maradana, Dematagoda, Kelaniya, Wanawasala, Hunupitiya, Enderamulla, Horape, Ragama, Walpola, Batuwaththa, Bulugahagoda, Ganemulla, Yagoda, Gampaha, Daraluwa, Bemmulla, Magalegoda, Heendeniya Pattiyagoda, Veyangoda, Wadurawa, Keenawala, Ganegoda, Wijaya Rajadahana, Mirigama, Wilwatta, Botale, Ambepussa, Yattalgoda, Bujjomuwa, Alawwa, Walakumbura, Polgahawela, Panaliya, Tismalpola, Yatagama, Rambukkana, Kadigamuwa, Gangoda, Ihala Kotte, Balana, Kadugannawa, Pilimatalawa, Peradeniya, Sarasavi Uyana, Kandy
+
+Colombo-Fort - Kandy reversed:
+Kandy, Sarasavi Uyana, Peradeniya, Pilimatalawa, Kadugannawa, Balana, Ihala Kotte, Gangoda, Kadigamuwa, Rambukkana, Yatagama, Tismalpola, Panaliya, Polgahawela, Walakumbura, Alawwa, Bujjomuwa, Yattalgoda, Ambepussa, Botale, Wilwatta, Mirigama, Wijaya Rajadahana, Ganegoda, Keenawala, Wadurawa, Veyangoda, Heendeniya Pattiyagoda, Magalegoda, Bemmulla, Daraluwa, Gampaha, Yagoda, Ganemulla, Bulugahagoda, Batuwaththa, Walpola, Ragama, Horape, Enderamulla, Hunupitiya, Wanawasala, Kelaniya, Dematagoda, Maradana, Colombo-Fort
+
+
+North Line:
+Polgahawela, Potuhera, Kurunegala, Wellawa, Ganewatta, Maho, Galgamuwa, Talawa, Anuradhapura, Medawachchiya, Vavuniya, Thandikulam, Omanthai, Puliyankulam, Mankulam, Murikandy, Murikandy Temple, Kilinochchi, Paranthan, Elephant Pass, Pallai, Eluthumadduval, Mirusuvil, Kodikamamam, Meesalai, Sankathanai, Chavakacheri, Thachanthoppu, Navatkuly, Punkankulam, Jaffna, Kokkuvil, Kondavil, Inuvil, Chunnakam, Mallakam, Tellipalai, Maviddapuram, Kankesanthurai
+
+North Line reversed:
+Kankesanthurai, Maviddapuram, Tellipalai, Mallakam, Chunnakam, Inuvil, Kondavil, Kokkuvil, Jaffna, Punkankulam, Navatkuly, Thachanthoppu, Chavakacheri, Sankathanai, Meesalai, Kodikamamam, Mirusuvil, Eluthumadduval, Pallai, Elephant Pass, Paranthan, Kilinochchi, Murikandy Temple, Murikandy, Mankulam, Puliyankulam, Omanthai, Thandikulam, Vavuniya, Medawachchiya, Anuradhapura, Talawa, Galgamuwa, Maho, Ganewatta, Wellawa, Kurunegala, Potuhera, Polgahawela
+
+
+Puttalam Line:
+Ragama, Ja-Ela, Seeduwa, Katunayake, Kurana, Negombo, Kochchikade, Lunuwila, Nattandiya, Madampe, Chilaw, Bangadeniya, Mundal, Palavi, Puttalam, Noor Nagar
+
+Puttalam Line reversed:
+Noor Nagar, Puttalam, Palavi, Mundal, Bangadeniya, Chilaw, Madampe, Nattandiya, Lunuwila, Kochchikade, Negombo, Kurana, Katunayake, Seeduwa, Ja-Ela, Ragama
+
+
+Coastal Line:
+Maradana, Colombo-Fort, Slave Island, Kollutipiya, Bambalapitiya, Wellawatta, Dehiwala, Mount Lavinia, Ratmalana, Moratuwa, Panadura, Wadduwa, Kaluthara, Beruwala, Aluthgama, Bentota, Kosgoda, Balapitiya, Ambalangoda, Hikkaduwa, Galle, Talpe, Koggala,
+Ahangama, Weligama, Kamburugamuva, Matara
+
+Coastal Line reversed:
+Matara, Kamburugamuva, Weligama, Ahangama, Koggala, Talpe, Galle, Hikkaduwa, Ambalangoda, Balapitiya, Kosgoda, Bentota, Aluthgama, Beruwala, Kaluthara, Wadduwa, Panadura, Moratuwa, Ratmalana, Mount Lavinia, Dehiwala, Wellawatta, Bambalapitiya, Kollutipiya, Slave Island, Colombo-Fort, Maradana
+
+
+Trincomalee Line:
+Trincomalee, China Bay, Thampalakamam, Kanthalai, Gal Oya
+
+Trincomalee Line reversed:
+Gal Oya, Kanthalai, Thampalakamam, China Bay, Trincomalee
+
+
+Mannar Line:
+Talaimannar, Mannar, Gulf of Mannar, Murankan, Madhu Road, Medawachchiya
+
+Mannar Line reversed:
+Medawachchiya, Madhu Road, Murankan, Gulf of Mannar, Mannar, Talaimannar
+
+
+Batticaloa Line:
+Maho, Moragollagama, Kalawewa, Kekirawa, Habarana, Gal Oya, Minneriya, Hingurankgoda, Punani, Valachchenai, Batticaloa
+
+Batticaloa Line reversed:
+Batticaloa, Valachchenai, Punani, Hingurankgoda, Minneriya, Gal Oya, Habarana, Kekirawa, Kalawewa, Moragollagama, Maho
+
+
+Kelani Valley Line:
+Colombo-Fort, Maradana, Baseline Road, Cotta Road, Narahenpita, Kirulapone, Nugegoda, Pengiriwatte, Udahamulla, Nawinna, Maharagama, Pannipitiya, Kottawa, Malapalla, Homagama Hospital, Homagama, Panagoda, Godagama, Meegoda, Watareka, Padukka, Pinnawala, Waga, Kosgama, Puwakpitiya, Avissawella
+
+Kelani Valley Line reversed:
+Avissawella, Puwakpitiya, Kosgama, Waga, Pinnawala, Padukka, Watareka, Meegoda, Godagama, Panagoda, Homagama, Homagama Hospital, Malapalla, Kottawa, Pannipitiya, Maharagama, Nawinna, Udahamulla, Pengiriwatte, Nugegoda, Kirulapone, Narahenpita, Cotta Road, Baseline Road, Maradana, Colombo-Fort
+
+
+create table train_schedule
+(
+trainNo varchar(5),
+trainName varchar(20),
+departureStation varchar(20),
+departureTime varchar(6),
+arrivalStation varchar(20),
+arrivalTime varchar(6),
+stationsIncluded VARCHAR(500),
+frequency varchar(20),
+otherInfomation varchar(200)
+);

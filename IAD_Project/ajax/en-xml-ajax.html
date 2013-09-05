@@ -1,0 +1,629 @@
+<html lang="en"><head>
+
+<title>Ajax Tutorial</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link type="text/css" href="en-xml-ajax_files/xul-friends.css" rel="stylesheet">
+<link type="text/css" href="en-xml-ajax_files/top.css" rel="stylesheet">
+<meta name="description" content="Ajax tutorial, how to build an Ajax page step by step, with examples. Tools and scripts.">
+<meta name="keywords" content="Ajax, XMLHttpRequest, JavaScript, dynamic, client-side, asynchronous">
+<link rel="canonical" href="http://www.xul.fr/en-xml-ajax.html">
+<style>.azurebubble,.azurebubble *{border:0 none;border-collapse:collapse;border-spacing:0;margin:0;padding:0;}.azurebubble .bubr1 .bubd1{height:7px;width:7px;background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/topleft.png);background-position:right bottom;background-repeat:no-repeat;}.azurebubble .bubr1 .bubd2{background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/top.png);background-position:left bottom;background-repeat:repeat-x;position:relative;}.goog-bubble-bottomarrow .bubr1 .bubd2 span{width:17px;height:7px;border:0;display:inline-block;background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/arrowup.png);position:absolute;top:0;}.goog-bubble-toparrow .bubr3 .bubd2 span{width:17px;height:7px;border:0;display:inline-block;background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/arrowdown.png);position:absolute;top:0;}.azurebubble .bubr1 .bubd3{height:7px;width:7px;background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/topright.png);background-position:left bottom;background-repeat:no-repeat;}.goog-bubble-rightarrow .bubr2 .bubd1 span{width:7px;height:17px;border:0;display:inline-block;background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/arrowleft.png);position:absolute;left:0;background-position:right center;}.azurebubble .bubr2 .bubd1{background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/left.png);background-repeat:repeat-y;background-position:right center;}.goog-bubble-leftarrow .bubr2 .bubd3 span{width:7px;height:17px;border:0;display:inline-block;background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/arrowright.png);position:absolute;left:0;}.azurebubble .bubr2 .bubd3{background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/right.png);background-repeat:repeat-y;}.azurebubble .bubr3 .bubd1{height:7px;width:7px;background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/botleft.png);background-position:right top;background-repeat:no-repeat;}.azurebubble .bubr3 .bubd2{background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/bot.png);background-repeat:repeat-x;position:relative;}.azurebubble .bubr3 .bubd3{height:7px;width:7px;background-image:url(https://ssl.gstatic.com/s2/oz/images/iframes/styles/graybubble/botright.png);}.azurebubble .relwrapper{position:relative;}.azurebubble .bubble_content{position:relative;border:0;z-index:10000;margin:0;padding:0;}.azurebubble .bubble_content iframe{position:absolute;border:0;z-index:10000;margin:0;padding:0;}.bubr1 .relwrapper,.bubr3 .relwrapper{height:7px;}</style></head><body>
+
+<!--XSTART1--> 
+
+<script type="text/javascript">
+window.google_analytics_uacct = "UA-6574971-3";
+</script>
+
+
+<div id="shade">
+	<div id="topleft">
+
+	</div>
+
+	<div id="searchbox"> 
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input name="cx" value="partner-pub-2681794164750401:ftsrnl-mk5m" type="hidden">
+    <input name="ie" value="ISO-8859-1" type="hidden">
+    <input style="border: 1px solid rgb(126, 157, 185); padding: 2px; background: url(&quot;http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif&quot;) no-repeat scroll left center rgb(255, 255, 255);" name="q" size="31" type="text">
+    <input name="sa" value="Search" type="submit">
+  </div>
+<input value="www.xul.fr/en-xml-ajax.html#ajax-get-text" name="siteurl" type="hidden"></form>
+<script type="text/javascript" src="en-xml-ajax_files/brand"></script>
+	</div>
+
+</div>
+
+<div id="antishade">
+	<div id="topmenu">
+	<a href="http://www.xul.fr/en/" target="_parent" title="Ajax and XUL, Web techniques and RIA">Home</a>
+	<a href="http://www.xul.fr/ajax/" target="_parent" title="Ajax tutorials, demos, and scripts">Ajax</a>
+	<a href="http://www.xul.fr/tutorial/" target="_parent" title="XUL tutorial">XUL</a>
+	<a href="http://www.xul.fr/javascript/" target="_parent" title="JavaScript language and case studies">JavaScript</a>
+	<a href="http://www.xul.fr/en/css/" target="_parent" title="CSS tutorials and scripts">CSS</a>	
+	<a href="http://www.xul.fr/en/html5/" target="_parent" title="HTML 5 the new standard">HTML 5</a>		
+	<a href="http://www.xul.fr/forum/" target="_parent" title="Questions and answers">FAQ-Forum</a>	
+	</div>
+</div>
+
+<div id="logo">
+</div>
+<div id="ajax">
+</div>
+
+
+<div id="menupanel">
+
+<div id="menutop">
+</div>
+
+<div class="menu">
+	<div class="title">
+		Ajax
+	</div>
+	
+    <div class="list"> <a href="http://www.xul.fr/en-xml-ajax.html" target="_parent" title="Ajax Tutorial">Ajax 
+      tutorial</a><br>
+      <a href="http://www.xul.fr/XMLHttpRequest-object.html" target="_parent" title="The XMLHttpRequest object">XMLHttpRequest</a> 
+      <br>
+      <a href="http://www.xul.fr/ajax-frameworks.html" target="_parent" title="Free ajax frameworks">Frameworks</a><br>
+      <a href="http://www.xul.fr/ajax/demos.html" target="_parent" title="Ajax demos and small scripts">Ajax demos      </a><br>
+      <a href="http://www.xul.fr/ajax/faq/" target="_parent">Ajax FAQ</a><br>
+	</div>
+</div>
+
+<div class="menu">
+	<div class="title">
+		Web 2.0
+	</div>
+    <div class="list"> <a href="http://www.xul.fr/web-2.0.html" target="_parent" title="Technologies of the Web 2.0">Technologies</a><br>
+      <a href="http://www.xul.fr/web-application.html" target="_parent" title="Building a Web application">Web application</a><br>
+      <a href="http://www.xul.fr/en-xml-rss.html" target="_parent" title="Building and using RSS feeds">RSS tutorial</a> </div>
+</div>
+
+<div class="menu">
+<script type="text/javascript"><!--
+google_ad_client = "pub-2681794164750401";
+/* 160x90 XUL */
+google_ad_slot = "8747886956";
+google_ad_width = 160;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="en-xml-ajax_files/show_ads.js">
+</script><script src="en-xml-ajax_files/show_ads_impl.js"></script><script src="en-xml-ajax_files/gcm_392279366d8656daff9da175563f505a.js"></script><script src="en-xml-ajax_files/expansion_embed.js"></script><script src="en-xml-ajax_files/test_domain.js"></script><script>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</script><ins style="display: inline-table; border: medium none; height: 90px; margin: 0pt; padding: 0pt; position: relative; visibility: visible; width: 160px;"><ins id="google_ads_frame1_anchor" style="display: block; border: medium none; height: 90px; margin: 0pt; padding: 0pt; position: relative; visibility: visible; width: 160px;"><iframe allowtransparency="true" hspace="0" id="google_ads_frame1" marginheight="0" marginwidth="0" name="google_ads_frame1" src="en-xml-ajax_files/ads.htm" style="left: 0pt; position: absolute; top: 0pt;" vspace="0" width="160" frameborder="0" height="90" scrolling="no"></iframe></ins></ins>
+</div>
+
+
+<div class="menu">
+<div class="title"> XML &amp; HTML</div>
+<div class="list"> <a href="http://www.xul.fr/en-xml-dom.html" target="_parent" title="The Document Object Model">DOM tutorial</a><br>
+    <a href="http://www.xul.fr/en-xml-svg.html" target="_parent" title="SVG short tutorial">SVG</a><br>
+	<a href="http://www.xul.fr/en-xml.html" target="_parent" title="XML overview and tools">XML</a><br>
+    <a href="http://www.xul.fr/tutorial/" target="_parent" title="XUL tutorial with examples">XUL tutorial</a> <br>
+    <a href="http://www.xul.fr/en-xml-rdf.html" target="_parent" title="RDF Tutorial">RDF</a>	
+</div>
+</div>
+
+<div class="menu">
+    <div class="title">Resources</div>
+    <div class="list">
+	  <a href="http://www.xul.fr/freeware.html" target="_parent" title="Tools for programmers">Freeware</a><br>
+      <a href="http://www.xul.fr/javascript/lightbox.html" target="_parent" title="Building a lightbox">Lightbox</a><br>
+      <a href="http://www.xul.fr/mozilla/" target="_parent" title="Firefox and Gecko">Mozilla</a><br>	  
+    </div>
+</div>
+
+
+<div class="menu">
+    <div class="title">Translations</div>
+    <div class="list">
+	<a href="http://www.xul.fr/" target="_parent">Français</a>    
+	</div>
+</div>
+
+
+  <br>
+
+
+</div>
+
+
+
+<!--XENDX--> 
+
+<div id="content">
+
+
+     
+          
+    <h1>Ajax Tutorial (Asynchronous Javascript + XML)</h1>
+          
+    
+    <h3 align="center">Creating client-side dynamic Web pages</h3>
+    
+ 
+  <fieldset><legend>Summary</legend> 
+  <ul>
+    <li><a href="#ajax-history">Brief history</a></li>
+    <li><a href="#ajax-why">Why  use Ajax?</a></li>
+    <li><a href="#ajax-in-depth">What is Ajax, in depth</a>?</li>
+    <li><a href="#ajax-how-works">How does it works?</a></li>
+    <li><a href="#ajax-dhtml">Ajax and DHTML</a></li>
+    <li><a href="#ajax-xmlhttprequest">The XMLHttpRequest object </a></li>
+    <li><a href="#request-step-by-step">Building a request, step by step</a> 
+      <ol>
+        <li><a href="#Instance">Create an instance</a></li>
+        <li><a href="#Wait">Wait</a></li>
+        <li><a href="#Request">Send the request</a></li>
+      </ol>
+    </li>
+    <li><a href="#ajax-example">Examples</a> 
+      <ol>
+        <li><a href="#ajax-get-text">Get a text</a></li>
+        <li><a href="#ajax-get-xml">Get from XML</a></li>
+        <li><a href="#ajax-get-body">Write to body</a></li>
+        <li><a href="#ajax-post">Post a text</a></li>
+      </ol>
+    </li>
+    <li><a href="#Ajax-Script">Using an external file</a></li>
+    <li><a href="#ajax-how-to">How to build an Ajax website?</a></li>
+    <li><a href="#ajax-drawbacks">Drawbacks</a></li>
+    <li><a href="#ajax-specifications">Specifications</a></li>
+    <li><a href="#ajax-resources">Resources</a></li>
+  </ul>
+  </fieldset>
+     
+   <h2><a name="ajax-history"></a>Brief history</h2>
+        
+  <p>Ajax is only a name given to a set of tools that were previously existing.<br>
+    The main part is <a href="http://www.xul.fr/XMLHttpRequest-object.html" target="_parent">XMLHttpRequest</a>, a server-side object usable in JavaScript, that was implemented 
+    into Internet Explorer since the 4.0 version.<br>
+    In Internet Explorer it is an ActiveX object that was first named 
+XMLHTTP some times, before to be generalized on all browser under the 
+name XMLHttpRequest, when the Ajax technology becomes 
+    commonly used.<br>
+    The use of XMLHttpRequest in 2005 by Google, in Gmail and GoogleMaps has contributed 
+    to the success of this format. But this is the when the name Ajax was itself coined that  
+    the technology started to be so popular. </p>
+
+
+  <h2><a name="ajax-why"></a>Why  use Ajax?</h2>
+        
+  <p>Mainly to build a fast, dynamic website, but also to save resources.<br>
+    For improving sharing of resources, it is better to use the power of all the 
+    client computers rather than just a  unique server and network. Ajax allows 
+    to perform processing on client computer (in JavaScript) with data taken from 
+    the server. <br>
+    The processing of web page formerly was only server-side, using web services 
+    or PHP scripts, before the whole page was sent within the network.<br>
+    But Ajax can selectively modify a part of a page displayed by the browser, 
+    and update it without the need to reload the whole document with all images, 
+    menus, etc...<br>
+    For example, fields of forms, choices of user, may be processed and the result 
+    displayed immediately into the same page. </p>
+  <h2><b><a name="ajax-in-depth"></a></b>What is Ajax in depth?</h2>
+        <p> Ajax is a set of technologies, supported by a web browser, including 
+          these elements:
+        </p><ul>
+          
+    <li> HTML and CSS for presenting.</li>
+          <li> JavaScript (ECMAScript) for local processing, and DOM (Document 
+            Object Model) to access data inside the page or to access elements 
+            of XML file read on the server (with the getElementByTagName method 
+            for example)... 
+          </li><li>The XMLHttpRequest object is used to read or send data on the server asynchronously. 
+        </li></ul>
+        Optionally... 
+        <ul>
+          <li>  DOMParser  may be used 
+          </li><li>PHP or another scripting language may be used on the server.</li>
+          <li>XML and XSLT to process the data if returned in XML form.</li>
+          <li>SOAP may be used to dialog with the server.</li>
+        </ul>
+        
+  <p>The "asynchronous" word, means that the response of the server 
+    while be processed when available, without to wait and to freeze the display 
+    of the page. </p>
+  <h2><b><a name="ajax-how-works"></a></b>How does it works? </h2>
+        
+  <p>Ajax uses a programming model with display and events. These events are user 
+    actions, they call functions associated to elements of the web page.<br>
+    Interactivity is achieved with forms and buttons. DOM allows to link elements 
+    of the page with actions and also to extract data from XML files provided 
+    by the server.<br>
+    To get data on the server, XMLHttpRequest provides two methods:<br>
+    - open: create a connection.<br>
+    - send: send a request to the server.<br>
+    Data furnished by the server will be found in the attributes of the XMLHttpRequest 
+    object:<br>
+    - <b>responseXml</b> for an XML file or<br>
+    - <b>responseText</b>&nbsp;for a plain text.<br>
+    <br>
+    Take note that a new XMLHttpRequest object has to be created for each new 
+    file to load.<br>
+    <br>
+    We have to wait for the data to be available to process it, and in this purpose, 
+    the state of availability of data is given by the <b>readyState</b> attribute 
+    of XMLHttpRequest.<br>
+    <br>
+    States of <b>readyState</b> follow (only the last one is really useful):</p>
+  <pre>0: not initialized.
+1: connection established.
+2: request received.
+3: answer in process.
+4: finished. </pre>
+  <h2> <b><a name="ajax-dhtml"></a></b>Ajax and DHTML</h2>
+        
+  <p>Dynamic HTML has same purpose and is  a set of standards:<br>
+    - HTML,<br>
+    - CSS,<br>
+    - JavaScript.<br>
+    DHTML allows to change the display of the page from user commands or from 
+    text typed by the user.<br>
+    Ajax allows also to send requests asynchronously and load data from the server. It is DHTML plus the XHR object.
+  </p>
+  <h2><a name="ajax-xmlhttprequest"></a>The XMLHttpRequest object </h2>
+        <p> Allows to interact with the servers, thanks to its methods and attributes.<br>
+          <br>
+          <font color="#006600">Attributes</font> </p>
+        
+  <table class="demo" border="0" cellpadding="4" cellspacing="2" width="100%">
+    <tbody><tr> 
+            
+      <td width="128"><font color="#666666"><b>readyState</b></font></td>
+            
+      <td width="601">the code successively changes value from 0 to 4 that means 
+        for "ready".</td>
+    </tr>
+          <tr> 
+            
+      <td width="128"><font color="#666666"><b>status</b></font></td>
+            
+      <td width="601">200 is OK<br>
+            404 if the page is not found.</td>
+          </tr>
+          <tr> 
+            
+      <td width="128"><font color="#666666"><b>responseText</b></font></td>
+            
+      <td width="601">holds loaded data as a string of characters.</td>
+          </tr>
+          <tr> 
+            
+      <td width="128"><font color="#666666"><b>responseXml</b></font></td>
+            
+      <td width="601">holds an XML loaded file, DOM's method allows to extract data.</td>
+          </tr>
+          <tr> 
+            
+      <td width="128" height="8"><b><font color="#666666">onreadystatechange</font></b></td>
+            
+      <td width="601" height="8">property that takes a function as value that is 
+        invoked when the readystatechange event is dispatched.</td>
+          </tr>
+  </tbody></table>
+        <p> <font color="#006600">Methods</font></p>
+        
+        <table class="demo" border="0" cellpadding="4" cellspacing="2" width="100%">
+    <tbody><tr> 
+            
+      <td width="160"><font color="#e3e3e3"><b><font color="#666666">open</font></b></font>(mode, 
+        url, boolean)<font color="#666666"></font></td>
+            
+      <td width="*">mode: type of request, GET or POST<br>
+              url: the location of the file, with a path.<br>
+        boolean: true (asynchronous) / false (synchronous).<br>
+              optionally, a login and a password may be added to arguments.</td>
+    </tr>
+          <tr> 
+            
+      <td width="160" height="2"><font color="#666666"><b>send</b></font>("string") 
+      </td>
+            
+      <td width="*" height="2">null for a GET command.</td>
+          </tr>
+  </tbody></table>
+        <h2><a name="request-step-by-step"></a>Building a request, step by step</h2>
+        <h4><a name="Instance"></a>First step: create an instance</h4>
+        
+  <p>This is just a classical instance of class, but two options must be tried, 
+    for browser compatibility. </p>
+
+              
+        
+  <pre>if (window.XMLHttpRequest) &nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">// Object of the current windows</font>
+{ 
+    xhr = new XMLHttpRequest();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">// Firefox, Safari, ...</font>
+} 
+else 
+ if (window.ActiveXObject)&nbsp;&nbsp;&nbsp;<font color="#009900">// ActiveX version</font>
+ {
+    xhr = new ActiveXObject("Microsoft.XMLHTTP"); <font color="#009900"> // Internet Explorer </font>
+ } </pre>
+           
+  <p>Or exceptions may be used instead: </p>
+    
+  <pre>try {
+   xhr = new ActiveXObject("Microsoft.XMLHTTP");   <font color="#009900"> // Trying Internet Explorer</font> 
+}
+catch(e)    <font color="#009900">// Failed </font>
+{
+  xhr = new XMLHttpRequest();    <span class="Style1">// Other browsers.</span>
+}</pre>
+
+        <h4><a name="Wait"></a>Second step: wait for the response</h4>
+        <p>The response and further processing are included in a function and 
+          the return of the function will be assigned to the <b>onreadystatechange</b> 
+          attribute of the object previously created. </p>
+       
+              
+        
+  <pre>xhr.onreadystatechange = function()&nbsp;{ <span class="Style1">// instructions to process the response</span> }; <font face="arial" size="2">                  </font></pre>
+  <pre>if (xhr.readyState == 4)
+{
+   <font color="#009900">// Received, OK</font>
+} else 
+{
+  <font color="#009900">// Wait...</font>
+}</pre>
+  <h4><a name="Request"></a>Third step: make the request itself</h4>
+        
+  <p>Two methods of XMLHttpRequest are used:<br>
+    - <b>open</b>: command GET or POST, URL of the document, true for asynchronous.<br>
+    - <b>send</b>: with POST only, the data to send to the server.</p>
+  <p>    The request below read a document on the server. </p>
+  <pre>xhr.open('GET', 'http://www.xul.fr/somefile.xml', true);                  
+xhr.send(null); </pre>
+  <h2><b><a name="ajax-example"></a></b>Examples<b> </b></h2>
+        <h3><a name="ajax-get-text"></a>Get a text</h3>
+
+        
+  <pre>&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function submitForm()
+{ 
+    var xhr; 
+    try {  xhr = new ActiveXObject('Msxml2.XMLHTTP');   }
+    catch (e) 
+    {
+        try {   xhr = new ActiveXObject('Microsoft.XMLHTTP');    }
+        catch (e2) 
+        {
+          try {  xhr = new XMLHttpRequest();     }
+          catch (e3) {  xhr = false;   }
+        }
+     }
+  
+   &nbsp;xhr.onreadystatechange  = function()
+    { 
+         if(xhr.readyState  == 4)
+         {
+              if(xhr.status  == 200) 
+                  document.ajax.dyn="Received:"  + xhr.responseText; 
+              else 
+                 document.ajax.dyn="Error code " + xhr.status;
+         }
+    }; 
+
+ &nbsp;&nbsp;xhr.open(GET, "data.txt",  true); 
+   xhr.send(null); 
+} 
+&lt;/script&gt;
+&lt;/head&gt;
+                 
+&lt;body&gt;
+    &lt;FORM method="POST" name="ajax" action=""&gt;                  
+         &lt;INPUT type="BUTTON" value="Submit"  ONCLICK="submitForm()"&gt;
+        &nbsp;&lt;INPUT type="text" name="dyn"  value=""&gt; 
+    &lt;/FORM&gt;
+ &lt;/body&gt;
+ &lt;/html&gt; </pre>
+  <center>
+    <font color="#999999">Syntax of form using Ajax</font>
+</center>
+
+     
+         
+                <p>View a <a href="http://www.xul.fr/ajax-get.html" target="_parent"><b>demo</b></a> 
+                  of the example in action.</p>
+             
+                <p>Download the <a href="http://www.xul.fr/demo.zip"><b>source</b></a>.</p>
+            
+        
+         
+          
+  <h4>Comments on the code: </h4>
+     
+        
+  <p><b><font color="#666666">new ActiveXObject(Microsoft.XMLHTTP)</font></b><br>
+    &nbsp;&nbsp;&nbsp;This constructor is for Internet Explorer.<br>
+    <br>
+    <b><font color="#666666">new XMLHttpRequest()</font></b><br>
+    &nbsp;&nbsp;&nbsp;This constructor is for any other browser including Firefox.<br>
+    <b><br>
+    <font color="#666666">http.onreadystatechange</font></b><br>
+    &nbsp;&nbsp;An anonymous function is assigned to the event indicator. <br>
+    <br>
+    <font color="#666666"><b>http.readyState 
+    == 4</b></font><br>
+    &nbsp;&nbsp;&nbsp;The 4 state means for the response is ready and sent by 
+    the server. <br>
+    <br>
+    <font color="#666666"><b>http.status 
+    == 200</b></font><font color="#666666" face="arial"><b></b></font><font color="#666666" face="arial" size="2"><b><br>
+    </b></font><font size="2">&nbsp;&nbsp;&nbsp;</font>This status 
+    means ok, otherwise some error code is returned, 404 for example.<br>
+    <br>
+    <b><font color="#666666">http.open( 
+    "POST", "data.xml", true);</font></b> <br>
+    &nbsp;&nbsp;&nbsp;POST or GET<br>
+    &nbsp;&nbsp;&nbsp;URL of the script to execute.<br>
+    &nbsp;&nbsp;&nbsp;true for asynchronous (false for synchronous).<br>
+    <br>
+    <b><font color="#666666">http.setRequestHeader("Content-Type", 
+    "application/x-www-form-urlencoded");</font></b> <br>
+    &nbsp;&nbsp;&nbsp;This is for POST only.<br>
+    <br>
+    <b><font color="#666666">http.send(document.getElementById("TYPEDTEXT").value); 
+    </font></b><br>
+    &nbsp;&nbsp;&nbsp;Send data to the server. Data comes from the "TYPEDTEXT" 
+    variable filled throught the form by the user. </p>
+  <h3><a name="ajax-get-xml"></a>Get from XML</h3>
+        
+  <p>To get data from an XML file, we have just to replace this line:  </p>
+             
+        
+  <pre>document.ajax.dyn="Received:" + xhr.responseText; </pre>
+           
+        
+  <p>
+    by this code:
+  </p>
+
+              
+        
+  <pre>var doc = xhr.responseXML; <font color="#009900">&nbsp;&nbsp;// Assign the XML file to a var</font>
+var element = doc.getElementsByTagName('root').item(0); &nbsp;<font color="#009900">&nbsp;// Read the first element</font>
+document.ajax.dyn.value= element.firstChild.data;&nbsp;&nbsp;&nbsp;<font color="#009900">&nbsp;// Assign the content to the form</font></pre>
+  <p>View a <a href="http://www.xul.fr/ajax-get-xml.html" target="_parent"><b>demo</b></a> of the get from XML example in action.</p>
+           
+        <h3><a name="ajax-get-body"></a>Write to body</h3>
+        
+  <p>In this <a href="http://www.xul.fr/ajax-get-body.html" target="_parent"><b>demo</b></a>, the 
+    text read is put into the body of the page, and not into a textfield. <br>
+    The 
+    code below replaces the textfield form object and the second part replaces 
+    the assignment into the JavaScript function. </p>
+
+              
+        <pre>&lt;div id="zone"&gt;
+    &nbsp;... some text to replace ...
+ &lt;/div&gt; </pre>
+  <pre>document.getElementById("zone").innerHTML = "Received:" + xhr.responseText;	               </pre>
+  <h3><a name="ajax-post"></a>Post a text</h3>
+        
+  <p>In this <a href="http://www.xul.fr/ajax-post-text.html" target="_parent"><b>demo</b></a>, a 
+    text is sent to the server and is written into a file. The call to the "open" 
+    method changes, the argument is POST, the url is the name of a file or script 
+    that receives the data sent, and that must process it. And the "send" 
+    method has now a value as argument that is a string of parameters. </p>
+
+              
+        
+  <pre>xhr.open("POST", "ajax-post-text.php", true); 
+xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                  
+xhr.send(data);</pre>
+  <p>The parameter of the send method is in the format of the HTML POST method. When 
+    several values are sent, they are separated by the ampersand symbol:</p>
+  <pre>var data = "file=" + url + "&amp;content=" + content;</pre>
+  The "file" parameter is the name of a file created to store the content. The 
+  filename must be checked by the server to prevent any other file to be modified. 
+  <h2><a name="Ajax-Script"></a>Using an external file</h2>
+  <p>It is simpler to include a JavaScript file. This line will be included into 
+    the head section of the HTML page:</p>
+  <pre>&lt;script src="ajax.js" type="text/javascript"&gt;&lt;/script&gt;</pre>
+  <p>And the function is called with this statement:</p>
+  <pre>var xhr = createXHR();</pre>
+  <p>View the script in the <a href="http://www.xul.fr/ajax.js.txt" target="_parent">ajax.js</a> 
+    file.</p>
+  <h2><b><a name="ajax-how-to"></a></b>How to build an Ajax website?</h2>
+        
+  <p>You need for some wrapper. A short list of frameworks is provided below.<br>
+    Your JavaScript program, integrated into a web page, sends request to the 
+    server to load files for rebuilding of pages. The received documents are processed 
+    with Dom's methods or XML parsers and the data are used to update the pages. 
+  </p>
+  <h2><b><a name="ajax-drawbacks"></a></b>Drawbacks of Ajax</h2>
+        
+  <p>- If JavaScript is not activated, Ajax can't works. The user must be asked 
+    to set JavaScript from within options of the browser, with the "noscript" 
+    tag. <br>
+    - Since data to display are loaded dynamically, they are not part of the page, 
+    and the keywords inside are not viewed by search engines.<br>
+    - The asynchronous mode may change the page with delays (when the processing 
+    on the server take some times), this may be disturbing.<br>
+    - The back button may be deactivated (this is not the case in examples provided 
+    here). This may be overcomed.</p>
+  <h2><a name="ajax-specifications"></a>Specifications and references </h2>
+  
+
+      <p>Ajax is based on these specifications:</p>
+	  <ul class="lam">
+        <li><a href="http://www.w3.org/TR/REC-xml/" target="_parent">XML 1</a>, <a href="http://www.w3.org/TR/html401/" target="_parent">HTML 
+              4</a>, <a href="http://www.w3.org/TR/DOM-Level-2-Core/" target="_parent">DOM 
+            2</a>, <a href="http://www.w3.org/TR/REC-CSS2/" target="_parent">CSS 2</a> from W3C </li>
+          <li><a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm" target="_parent">ECMAScript 
+            1.5</a>. Standard for JavaScript from ECMA.</li>
+          <li> W3C draft specification for <a href="http://www.w3.org/TR/XMLHttpRequest/" target="_parent">XMLHttpRequest</a>.</li>
+          <li><a rev="Section" href="http://www.w3.org/Protocols/rfc2616/rfc2616.html"> 
+          HTTP 1.1</a>. Status codes: 404 etc</li>
+	  </ul>
+	  But was first described by this article:
+	     <ul class="lam">
+       <li><a href="http://www.adaptivepath.com/ideas/essays/archives/000385.php" target="_parent">Ajax, 
+            a New Approach to Web applications</a>. The article that coined the 
+            term. </li>
+       </ul>
+        <table bgcolor="#00cc00" border="0" cellpadding="1" cellspacing="0" width="100%">
+          <tbody><tr> 
+            
+      <td> <b><a name="ajax-resources"></a><font color="#ffffff">Resources</font></b></td>
+          </tr>
+        </tbody></table>
+		
+        <h4>More</h4>
+
+  <ul class="lam">
+    <li><a href="http://www.xul.fr/ajax-javascript-json.html" target="_parent">JSON</a>. The second 
+    data format for Ajax.</li>
+    <li><a href="http://www.xul.fr/en/technologies/gears-ajax.php" target="_parent">Ajax offline</a>. Ajax and Gears, tutorial and demo. </li>
+    <li><a href="http://www.xul.fr/ajax/ajax-php.php" target="_parent">Ajax and PHP</a>. Study of the interaction between Ajax and a PHP script by the GET and POST commands. </li>
+  </ul>
+        <h4>Tools </h4>
+        
+<ul class="lam">
+    <li><a href="https://addons.mozilla.org/fr/firefox/addon/1843" target="_parent">Firebug</a>. 
+      Firefox extension to debug Ajax.</li>
+    <li><a href="http://www.scriptol.com/ajax/anaa/" target="_parent">Anaa</a>. A simple framework 
+      based on this tutorial.</li>
+    <li><a href="http://www.netbeans.org/" target="_parent">NetBeans</a>. IDE to build Ajax applications. </li>
+</ul>
+
+
+<script type="text/javascript"><!--
+google_ad_client = "pub-2681794164750401";
+google_ad_slot = "0934517442";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="en-xml-ajax_files/show_ads.js">
+</script><script src="en-xml-ajax_files/show_ads_impl.js"></script><script>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</script><ins style="display: inline-table; border: medium none; height: 90px; margin: 0pt; padding: 0pt; position: relative; visibility: visible; width: 728px;"><ins id="google_ads_frame2_anchor" style="display: block; border: medium none; height: 90px; margin: 0pt; padding: 0pt; position: relative; visibility: visible; width: 728px;"><iframe allowtransparency="true" hspace="0" id="google_ads_frame2" marginheight="0" marginwidth="0" name="google_ads_frame2" src="en-xml-ajax_files/ads_002.htm" style="left: 0pt; position: absolute; top: 0pt;" vspace="0" width="728" frameborder="0" height="90" scrolling="no"></iframe></ins></ins>
+
+
+<h4>Frameworks </h4>
+<ul class="lam">
+    <li>See at <a href="http://www.xul.fr/ajax-frameworks.html" target="_parent">Ajax Frameworks</a>.</li>
+</ul>
+        
+  <div class="copyright">(c) 2006-2010 Denis Sureau and <a href="http://www.xul.fr/en/" target="_parent"> 
+    xul.fr</a></div>
+     
+</div>
+
+<div id="xan">
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="en-xml-ajax_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6574971-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</div>
+
+</body></html>

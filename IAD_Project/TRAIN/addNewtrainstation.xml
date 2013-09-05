@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<trainstations>
+<trainst>
+<trainid/>
+<trainstation/>
+<district/>
+</trainst>
+<trainst>
+<trainid>sdsd</trainid>
+<trainstation>sdsds</trainstation>
+<district>sdsds</district>
+</trainst>
+<trainst><trainid>b</trainid><trainstation>c</trainstation><district>c</district></trainst><trainst><trainid>ratnapura</trainid><trainstation>sava</trainstation><district>sava</district></trainst><trainst><trainid>colombo</trainid><trainstation>ratnapura</trainstation><district>ratnapura</district></trainst><trainst><trainid>001</trainid><trainstation>ads</trainstation><district>asassas</district></trainst></trainstations>

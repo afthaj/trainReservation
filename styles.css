@@ -1,0 +1,263 @@
+body  {
+    font-family: "Tahoma", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+	background-color: #EEE;
+}
+
+.mainContainer {
+    width: 95%;
+    background: #EEE;
+    margin: 0 auto;
+}
+
+.headerContainer{
+    z-index: 10;
+    border: 0px 10px 100px 10px;
+	border-radius:5px;
+    background: #3B5998;
+    padding: 5px 5px;
+	margin:5px 5px;
+}
+
+.headerContainer p {
+	text-align: right;
+    color: #FFF;
+	font-size:12px
+}
+
+.headerContainer a:link, .headerContainer a:visited {
+    color: #FFF;
+	text-decoration:none;
+}
+
+.headerContainer a:hover {
+    color: #AAA;
+	text-decoration:none;
+}
+
+#heading {
+	text-align: left;
+    color: #FFF;
+	font-size:48px
+	}
+
+.bodyContainer {
+	height: auto;
+	display:block;
+	clear:none;
+	padding:10px 10px;
+	background: #EEE;
+	margin: 5px 5px; /* the auto margins (in conjunction with a width) center the page */
+
+}
+
+#gallery {
+	height:500px;
+	background:#EEE;
+	/*background:-moz-radial-gradient(center 45deg, circle closest-side, #222 40%, #000 100%);
+	background:-webkit-gradient(radial, center 50%, 20, center 50%, 250, from(#333), to(#000));*/
+	}
+
+
+/* begin footer styles */
+
+.footerContainer { 
+     padding: 0 10px; 
+     background: #3B5998;
+	 margin:5px 5px;
+	 border-radius:5px;
+} 
+.footerContainer p {
+	color:#FFF;
+    text-align:right;
+    margin: 0;
+    padding: 10px 0;
+}
+
+/* end footer styles */
+
+
+/*  begin sidebar styles */
+
+.sidebar {
+    float: left;
+    width:100%;
+	height:auto;
+    background-color: #EEE;
+}
+
+/* end sidebar styles */
+
+
+/*  begin navBar styles */
+
+#navBar {
+      width: 100%;
+      float: left;
+      margin: 0 0 3em 0;
+      padding: 0;
+      list-style: none;
+      background-color: #EEE;
+      border: 1px solid #ccc;
+	  border-radius: 5px;
+	  }
+
+#navBar li {
+      float: left;
+	  }
+
+#navBar li a {
+      display: block;
+      padding: 8px 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #069;
+      border-right: 1px solid #ccc;
+	  }
+	  
+#navBar li a:hover {
+      color: #c00;
+      background-color: #fff; 
+	  border-radius:5px;
+	  }
+
+/* end navBar styles */
+
+.mainContentContainer {
+	width: 99%;
+	height:96%;
+    background-color: #EEE;
+    margin: 50px 0px 0px 0px;
+	padding: 5px 5px;
+	border: 1px solid #ccc;
+	border-radius:5px;
+}
+
+.mainContent {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    text-decoration:none;
+    text-align: justify;
+    color: #000000;
+	clear:both;
+	padding:5px;
+}
+
+.mainContent a:link, .mainContent a:visited {
+    text-decoration:underline;
+    color: inherit;
+}
+
+.mainContent a:hover {
+    text-decoration:underline;
+    color: #BBB;
+}
+/*
+.visionandmission {
+	border: 1px solid #ccc;
+	border-radius:5px;
+	padding:0 0 0 3px;
+	width:45em;
+	float:left;
+	}
+	
+.visionandmission h3 {
+	text-align:left;
+	}
+	
+.visionandmission p {
+	padding:10px;
+	font-style:italic;
+	}
+	
+/*.xml {
+	border: 1px solid #ccc;
+	border-radius:5px;
+	width:39em;
+	margin:1.8em 0 0 46em;
+	padding:5px;
+	}
+*/
+
+/* begin table styles */
+
+table {
+	border-collapse:collapse;
+	line-height:1.5em;
+	}
+
+th, td {
+	font-size:15px;
+	}
+
+thead {
+	background-color:#3B5998;
+	color:#EEE;
+	border-right:thick;
+	text-align:center;	
+	}
+	
+/* end table styles */
+
+
+/* begin form styles */
+
+fieldset {      
+position: relative;      
+float: left;      
+clear: both;      
+width: 100%;      
+margin: 0 0 -1em 0;      
+padding: 0 0 1em 0;      
+border-style: none;      
+border-top: 1px solid #CCC;      
+background-color: #EEE;     
+}
+
+legend span {      
+padding: 0;      
+color: #000000;      
+font-weight: bold;
+position: absolute;      
+left: 0.74em;      
+top: 0;      
+margin-top: 1.25em;      
+font-size: 135%;     
+}
+
+fieldset ol {      
+padding: 3.5em 1em 0 1em;      
+padding-top: 3.25em; 
+list-style: none;     
+}
+
+fieldset li {    
+float: left;    
+clear: left;    
+width: 100%;    
+padding-bottom: 1em;   
+}
+
+fieldset.submit {      
+float: none;      
+width: auto;      
+padding-top: 1.5em;      
+padding-left: 12em;      
+background-color: #EEE;     
+}
+
+fieldset.reservationTable {      
+float: none;    
+width: auto;
+padding-top: 1.5em;
+background-color: #EEE;
+}
+
+label {
+float: left;    
+width: 10em;    
+margin-right: 1em;   
+text-align:right;
+}
+
+/* end form styles */

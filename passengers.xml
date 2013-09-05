@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<passengers>
+  <passenger>
+  	<passengerID/>
+	<username/>
+	<password/>
+	<joinDate/>
+	<firstname/>
+	<othernames/>
+	<lastname/>
+	<gender/>
+	<dob/>
+	<age/>
+	<address/>
+	<telephoneNumber/>
+	<emailAddress/>
+  </passenger>
+<passenger><passengerID>2</passengerID><username>muznia</username><password>456</password><joinDate>2010-12-27 13:07:59</joinDate><firstname>Muznia</firstname><othernames></othernames><lastname>Jaldin</lastname><gender>F</gender><dob>1984-11-24</dob><age>26</age><address>218/61, Deniyawatta Road, Thalangama, Battaramulla</address><telephoneNumber>0778499319</telephoneNumber><emailAddress>muzniajaldin@yahoo.com</emailAddress></passenger><passenger><passengerID>3</passengerID><username>rajitha</username><password>123</password><joinDate>2010-12-29 11:08:33</joinDate><firstname>Rajitha</firstname><othernames>Shalika</othernames><lastname>Jayasekara</lastname><gender>M</gender><dob>1987-04-14</dob><age>23</age><address>Siddamulla, Kottawa</address><telephoneNumber></telephoneNumber><emailAddress></emailAddress></passenger><passenger><passengerID>4</passengerID><username>dada</username><password>123</password><joinDate>2010-12-30 11:18:18</joinDate><firstname>Imtiaz</firstname><othernames>Saramasth</othernames><lastname>Jaldin</lastname><gender>M</gender><dob>1951-05-16</dob><age>59</age><address>218/61, Deniyawatta Road, Thalangama, Battaramulla</address><telephoneNumber>0775799571</telephoneNumber><emailAddress>i.jaldin@yahoo.com</emailAddress></passenger><passenger><passengerID>5</passengerID><username>milinda</username><password>123</password><joinDate>2010-12-30 11:40:33</joinDate><firstname>Milinda</firstname><othernames></othernames><lastname>Jayathilaka</lastname><gender>M</gender><dob>1987-01-01</dob><age>23</age><address>Colombo 07</address><telephoneNumber></telephoneNumber><emailAddress></emailAddress></passenger><passenger><passengerID>12</passengerID><username>diyana</username><password>123</password><joinDate>2010-12-30 12:32:29</joinDate><firstname>Diyana</firstname><othernames></othernames><lastname>Kahawita</lastname><gender>F</gender><dob>1990-08-10</dob><age>20</age><address>New York</address><telephoneNumber>0112345678</telephoneNumber><emailAddress>Denator@live.com</emailAddress></passenger><passenger><passengerID>13</passengerID><username>passenger1</username><password>123</password><joinDate>2010-12-31 11:47:38</joinDate><firstname>Passenger</firstname><othernames>Number</othernames><lastname>One</lastname><gender>M</gender><dob>1988-11-18</dob><age>22</age><address>Wakaputa Handiya, Colombo</address><telephoneNumber>0777654321</telephoneNumber><emailAddress>passengerone@gmail.com</emailAddress></passenger></passengers>
